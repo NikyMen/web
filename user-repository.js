@@ -34,7 +34,6 @@ export class UserRepository {
       username,
       password: hashedPassword
     }).save()
-
     return id
     
     
