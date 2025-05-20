@@ -5,6 +5,7 @@ import fs from "fs"
 import path from "path"
 import { fileURLToPath } from "url"
 import cookieParser from "cookie-parser"  // <-- ya estaba importado
+import jws from "jsonwebtoken"
 
 
 
@@ -45,6 +46,7 @@ app.post("/login", async (req, res) => {
 
   try {
     const user = await UserRepository.login({ username, password })
+    const token = jwt.sign({id: user._id, username: user.username}, SECRET_KEY)
     res.cookie("user", JSON.stringify(user), { httpOnly: true }) // <-- guarda cookie
     res.send({ user })
   } catch (error) {
