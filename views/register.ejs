@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Registro</title>
+</head>
+<body>
+  <h2>Crear cuenta</h2>
+  <form id="registerForm">
+    <input type="text" name="username" placeholder="Usuario" required>
+    <input type="password" name="password" placeholder="Contraseña" required>
+    <button type="submit">Registrarse</button>
+  </form>
+
+  <script>
+    document.getElementById("registerForm").addEventListener("submit", async (e) => {
+      e.preventDefault()
+      const data = {
+        username: e.target.username.value,
+        password: e.target.password.value
+      }
+
+      const res = await fetch("/register", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
+      })
+
+      const result = await res.json().catch(() => null)
+
+      if (res.ok) {
+        alert("Usuario registrado con éxito")
+        window.location.href = "/"
+      } else {
+        alert(result?.error || "Error al registrar usuario")
+      }
+    })
+  </script>
+</body>
+</html>
