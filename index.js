@@ -6,13 +6,18 @@ import path from "path"
 import { fileURLToPath } from "url"
 import cookieParser from "cookie-parser"  // <-- ya estaba importado
 import jwt from "jsonwebtoken"            // <-- corrección: era jwt, no jws
+import expressLayouts from "express-ejs-layouts"
 
 const SECRET_KEY = "mi_clave_secreta" // <-- podés mover esto a un archivo .env
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
-const app = express()
+const app = express()  // <-- ESTA LÍNEA DEBE IR ANTES de usar app
+
+// ✅ ahora sí, acá va expressLayouts
+app.use(expressLayouts)
+app.set("layout", "layout") // Esto toma views/layout.ejs como base
 
 app.set("view engine", "ejs")
 app.set("views", path.join(__dirname, "views"))  // <-- necesario para usar /views
@@ -39,23 +44,20 @@ app.use((req, res, next) => {
 })
 
 app.get("/", (req, res) => {
-  // si hay usuario logueado, pasarlo a la vista; si no, username = null
-  res.render("index", { username: res.locals.user?.username || null })
+  res.render("index", {
+  username: res.locals.user?.username || null,
+  user: res.locals.user})
+
 })
 
 app.get("/protected", (req, res) => {
-  if (!res.locals.user) {
-    return res.redirect("/")  // <-- si no hay usuario, no accede
-  }
-
-  res.render("protected", { user: res.locals.user })  // <-- muestra vista protegida
+  if (!res.locals.user) return res.redirect("/")
+  res.render("protected", { user: res.locals.user })
 })
 
 app.get("/register", (req, res) => {
   res.render("register")
 })
-
-
 
 ///////////////////////////////////////////////////////////////////////////
 ///////////////////////app.post////////////////////////////////////////////
@@ -67,7 +69,7 @@ app.post("/login", async (req, res) => {
   try {
     const user = await UserRepository.login({ username, password })
     const token = jwt.sign({ id: user._id, username: user.username }, SECRET_KEY, { expiresIn: "2h" })
-    res.cookie("user", token, { httpOnly: true }) // <-- guarda el token como cookie
+    res.cookie("user", token, { httpOnly: true })
     res.send({ user })
   } catch (error) {
     res.status(401).json({ error: "Credenciales inválidas" })
@@ -87,10 +89,9 @@ app.post("/register", async (req, res) => {
 })
 
 app.post("/logout", (req, res) => {
-  res.clearCookie("user")  // <-- borra la cookie del usuario
-  res.redirect("/")        // <-- vuelve al inicio
+  res.clearCookie("user")
+  res.redirect("/")
 })
-
 
 ///////////////////////////////////////////////////////////////////////////
 

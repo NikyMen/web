@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title><%= typeof title !== 'undefined' ? title : 'Repuestos Méndez' %></title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans">
+
+  <!-- ✅ Encabezado reutilizable -->
+  <%- include('partials/header') %>
+
+  <!-- ✅ Cuerpo dinámico -->
+  <main class="p-6">
+    <%- body %>
+  </main>
+
+</body>
+</html>
