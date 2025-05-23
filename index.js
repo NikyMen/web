@@ -25,6 +25,8 @@ app.set("views", path.join(__dirname, "views"))  // <-- necesario para usar /vie
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use(cookieParser())  // <-- activa el uso de cookies
+app.use(express.static(path.join(__dirname, "public")))
+
 
 // middleware para extraer el usuario desde la cookie con JWT
 app.use((req, res, next) => {
