@@ -9,47 +9,5 @@
   🚚 Envío gratis en compras mayores a $20.000
 </div>
 
-  <% if (!user) { %>
-    <h2>Iniciar sesión</h2>
-    <form id="loginForm">
-     <input type="text" name="username" required />
-     <input type="password" name="password" required />
-     <button type="submit">Entrar</button>
-    </form>
-
-    <p>¿No tenés cuenta? <a href="/register">Registrate</a></p>
-
-    <script>
-        document.getElementById("loginForm").addEventListener("submit", async (e) => {
-            e.preventDefault()
-
-            const data = {
-            username: e.target.username.value,
-            password: e.target.password.value
-            }
-
-            const res = await fetch("/login", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(data)
-            })
-
-            const result = await res.json()
-
-            if (res.ok) {
-            alert(`Bienvenido ${result.user.username}`)
-            window.location.href = "/protected"
-            } else {
-            alert("Usuario o contraseña inválidos")
-            }
-        })
-    </script>
-  <% } else { %>
-    <h2>Hola <%= user.username %>!</h2>
-    <p>Sesión iniciada correctamente.</p>
-    <form method="POST" action="/logout">
-      <button type="submit">Cerrar sesión</button>
-    </form>
-  <% } %>
 </body>
 </html>
