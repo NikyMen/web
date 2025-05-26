@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "nombre": "Manubrio reforzado",
+    "precio": 14500,
+    "descripcion": "Manubrio de acero reforzado para motos urbanas.",
+    "imagen": "/img/manubrio.jpg"
+  },
+  {
+    "id": 2,
+    "nombre": "Escape deportivo",
+    "precio": 28000,
+    "descripcion": "Escape de alto rendimiento con sonido deportivo.",
+    "imagen": "/img/escape.jpg"
+  },
+  {
+    "id": 3,
+    "nombre": "Cubierta 110/90 R17",
+    "precio": 32000,
+    "descripcion": "Cubierta para calle, excelente agarre y durabilidad.",
+    "imagen": "/img/cubierta.jpg"
+  },
+  {
+    "id": 4,
+    "nombre": "Casco integral",
+    "precio": 35000,
+    "descripcion": "Casco homologado con visor y acolchado interior.",
+    "imagen": "/img/casco.jpg"
+  },
+  {
+    "id": 5,
+    "nombre": "Carburador universal",
+    "precio": 22000,
+    "descripcion": "Carburador adaptable a múltiples modelos.",
+    "imagen": "/img/carburador.jpg"
+  },
+  {
+    "id": 6,
+    "nombre": "Cilindro completo",
+    "precio": 44000,
+    "descripcion": "Cilindro completo con pistón y aros incluidos.",
+    "imagen": "/img/cilindro.jpg"
+  }
+]

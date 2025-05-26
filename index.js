@@ -8,6 +8,7 @@ import cookieParser from "cookie-parser"  // <-- ya estaba importado
 import jwt from "jsonwebtoken"            // <-- corrección: era jwt, no jws
 import expressLayouts from "express-ejs-layouts"
 
+
 const SECRET_KEY = "mi_clave_secreta" // <-- podés mover esto a un archivo .env
 
 const __filename = fileURLToPath(import.meta.url)
@@ -66,6 +67,17 @@ app.get("/login", (req, res) => {
     title: "Iniciar sesión",
     user: res.locals.user
   })
+})
+
+app.get("/productos", (req, res) => {
+  const productos = JSON.parse(fs.readFileSync("./data/productos.json"))
+  const termino = req.query.buscar?.toLowerCase() || ""
+
+  const filtrados = productos.filter(p =>
+    p.nombre.toLowerCase().includes(termino)
+  )
+
+  res.render("productos", { productos: filtrados, user: res.locals.user })
 })
 
 
