@@ -1,0 +1,518 @@
+[
+{
+    "nombre": "TRAJE PARA LLUVIA DELTA FLEX EGG (XXL)",
+    "precio": 26058.06,
+    "descripcion": "Producto de Intercap con stock",
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/iconos/icono-album.png"
+  },
+  {
+    "nombre": "TRAJE PARA LLUVIA DELTA FLEX EGGG (XXXL)",
+    "precio": 28652.52,
+    "descripcion": "Producto de Intercap con stock",
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/iconos/icono-album.png"
+  },
+  {
+    "nombre": "TRAJE PARA LLUVIA DELTA FLEX P (S)",
+    "precio": 23689.17,
+    "descripcion": "Producto de Intercap con stock",
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/iconos/icono-album.png"
+  },
+  {
+    "nombre": "TRAJE PARA LLUVIA MK (S)",
+    "precio": 49706.8,
+    "descripcion": "Producto de Intercap con stock",
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/productos/018/traje-lluvia-mk.jpg?pfdrid_c=true"
+  },
+  {
+    "nombre": "TRAJE PARA LLUVIA MK (L)",
+    "precio": 49706.8,
+    "descripcion": "Producto de Intercap con stock",
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/productos/018/traje-lluvia-mk.jpg?pfdrid_c=true"
+  },
+  {
+    "nombre": "TRAJE PARA LLUVIA STANDARD MK-XS",
+    "precio": 42282.24,
+    "descripcion": "Producto de Intercap con stock",
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/productos/018/traje-lluvia-standard-mk.jpg?pfdrid_c=true"
+  },
+  {
+    "nombre": "TRAJE DE AGUA STANDARD MOTO MK-S",
+    "precio": 47819.2,
+    "descripcion": "Producto de Intercap con stock",
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/productos/018/traje-agua-standard-moto.jpg?pfdrid_c=true"
+  },
+  {
+    "nombre": "TRAJE DE AGUA STANDARD MOTO MK-M",
+    "precio": 47819.2,
+    "descripcion": "Producto de Intercap con stock",
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/productos/018/traje-agua-standard-moto.jpg?pfdrid_c=true"
+  },
+  {
+    "nombre": "TRAJE PARA LLUVIA SERRANA MUJER (P) (S)",
+    "precio": 23311.38,
+    "descripcion": "Producto de Intercap con stock",
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/iconos/icono-album.png"
+  },
+  {
+    "nombre": "TRAJE PARA LLUVIA SERRANA MUJER (EG) (XXL)",
+    "precio": 31160.28,
+    "descripcion": "Producto de Intercap con stock",
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/iconos/icono-album.png"
+  },
+  {
+    "nombre": "TRAJE PARA LLUVIA PROTER (P) (S)",
+    "precio": 32326.08,
+    "descripcion": "Producto de Intercap con stock",
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/iconos/icono-album.png"
+  },
+  {
+    "nombre": "TRAJE PARA LLUVIA PROTER (G) (L)",
+    "precio": 32326.08,
+    "descripcion": "Producto de Intercap con stock",
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/iconos/icono-album.png"
+  },
+  {
+    "nombre": "POLAINA CUBRE CALZADO DELTA NEGRO G (L) (HASTA TALLE 41)",
+    "precio": 10716.5,
+    "descripcion": "Producto de Intercap con stock",
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/productos/018/polaina-cubre-calzado.jpg?pfdrid_c=true"
+  },
+  {
+    "nombre": "POLAINA CUBRE CALZADO DELTA NEGRO GG (XL) (HASTA TALLE 45)",
+    "precio": 10716.5,
+    "descripcion": "Producto de Intercap con stock",
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/productos/018/polaina-cubre-calzado.jpg?pfdrid_c=true"
+  },
+  {
+    "nombre": "POLAINA CUBRE CALZADO DELTA NEGRO M (M) (HASTA TALLE 39)",
+    "precio": 10716.5,
+    "descripcion": "Producto de Intercap con stock",
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/productos/018/polaina-cubre-calzado.jpg?pfdrid_c=true"
+  },
+  {
+    "nombre": "GUANTES RADIKAL RIDE ROJO TALLE \"S\"",
+    "precio": 32249.82,
+    "descripcion": "Producto de Intercap con stock",
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/iconos/icono-album.png"
+  },
+  {
+    "nombre": "GUANTES RADIKAL RIDE ROJO TALLE \"2XL\"",
+    "precio": 32249.82,
+    "descripcion": "Producto de Intercap con stock",
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/iconos/icono-album.png"
+  },
+  {
+    "nombre": "GUANTES RADIKAL RIDE AMARILLO TALLE \"S\"",
+    "precio": 32249.82,
+    "descripcion": "Producto de Intercap con stock",
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/iconos/icono-album.png"
+  },
+  {
+    "nombre": "GUANTES RADIKAL RIDE AMARILLO TALLE \"M\"",
+    "precio": 32249.82,
+    "descripcion": "Producto de Intercap con stock",
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/iconos/icono-album.png"
+  },
+  {
+    "nombre": "GUANTES RADIKAL RIDE AMARILLO TALLE  \"3XL\"",
+    "precio": 32249.82,
+    "descripcion": "Producto de Intercap con stock",
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/iconos/icono-album.png"
+  },
+  {
+    "nombre": "CAMPERA RADIKAL CONCEPT NEGRO TALLE \"S\"",
+    "precio": 87459.11,
+    "descripcion": "Producto de Intercap con stock",
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/iconos/icono-album.png"
+  },
+  {
+    "nombre": "CAMPERA RADIKAL CONCEPT NEGRO TALLE \"M\"",
+    "precio": 87459.11,
+    "descripcion": "Producto de Intercap con stock",
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/iconos/icono-album.png"
+  },
+  {
+    "nombre": "CAMPERA RADIKAL CONCEPT NEGRO TALLE \"L\"",
+    "precio": 87459.11,
+    "descripcion": "Producto de Intercap con stock",
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/iconos/icono-album.png"
+  },
+  {
+    "nombre": "CAMPERA RADIKAL CONCEPT NEGRO TALLE \"XL\"",
+    "precio": 87459.11,
+    "descripcion": "Producto de Intercap con stock",
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/iconos/icono-album.png"
+  },
+  {
+    "nombre": "CAMPERA RADIKAL CONCEPT NEGRO TALLE \"2XL\"",
+    "precio": 87459.11,
+    "descripcion": "Producto de Intercap con stock",
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/iconos/icono-album.png"
+  },
+  {
+    "nombre": "CAMPERA RADIKAL CONCEPT NEGRO TALLE \"3XL\"",
+    "precio": 87459.11,
+    "descripcion": "Producto de Intercap con stock",
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/iconos/icono-album.png"
+  },
+  {
+    "nombre": "CAMPERA RADIKAL CONCEPT NEGRO TALLE \"4XL\"",
+    "precio": 87459.11,
+    "descripcion": "Producto de Intercap con stock",
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/iconos/icono-album.png"
+  },
+  {
+    "nombre": "CAMPERA RADIKAL RIDE GRIS TALLE \"S\"",
+    "precio": 106394.79,
+    "descripcion": "Producto de Intercap con stock",
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/iconos/icono-album.png"
+  },
+  {
+    "nombre": "CAMPERA RADIKAL RIDE GRIS TALLE \"M\"",
+    "precio": 106394.79,
+    "descripcion": "Producto de Intercap con stock",
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/iconos/icono-album.png"
+  },
+  {
+    "nombre": "CAMPERA RADIKAL RIDE GRIS TALLE \"L\"",
+    "precio": 106394.79,
+    "descripcion": "Producto de Intercap con stock",
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/iconos/icono-album.png"
+  },
+  {
+    "nombre": "CAMPERA RADIKAL RIDE GRIS TALLE \"XL\"",
+    "precio": 106394.79,
+    "descripcion": "Producto de Intercap con stock",
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/iconos/icono-album.png"
+  },
+  {
+    "nombre": "CAMPERA RADIKAL RIDE GRIS TALLE \"2XL\"",
+    "precio": 106394.79,
+    "descripcion": "Producto de Intercap con stock",
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/iconos/icono-album.png"
+  },
+  {
+    "nombre": "CAMPERA RADIKAL RIDE ROJO TALLE \"S\"",
+    "precio": 106394.79,
+    "descripcion": "Producto de Intercap con stock",
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/iconos/icono-album.png"
+  },
+  {
+    "nombre": "CAMPERA RADIKAL RIDE ROJO TALLE \"M\"",
+    "precio": 106394.79,
+    "descripcion": "Producto de Intercap con stock",
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/iconos/icono-album.png"
+  },
+  {
+    "nombre": "CAMPERA RADIKAL RIDE ROJO TALLE \"L\"",
+    "precio": 106394.79,
+    "descripcion": "Producto de Intercap con stock",
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/iconos/icono-album.png"
+  },
+  {
+    "nombre": "CAMPERA RADIKAL RIDE ROJO TALLE \"XL\"",
+    "precio": 106394.79,
+    "descripcion": "Producto de Intercap con stock",
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/iconos/icono-album.png"
+  },
+  {
+    "nombre": "CAMPERA RADIKAL RIDE ROJO TALLE \"2XL\"",
+    "precio": 106394.79,
+    "descripcion": "Producto de Intercap con stock",
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/iconos/icono-album.png"
+  },
+  {
+    "nombre": "CAMPERA RADIKAL RIDE ROJO TALLE \"3XL\"",
+    "precio": 106394.79,
+    "descripcion": "Producto de Intercap con stock",
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/iconos/icono-album.png"
+  },
+  {
+    "nombre": "PANTALONES PARA LLUVIA DELTA",
+    "precio": 20670.32,
+    "descripcion": "Producto de Intercap con stock",
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/iconos/icono-album.png"
+  },
+  {
+    "nombre": "BARBIJO TAPABOCA NGK",
+    "precio": 120,
+    "descripcion": "Producto de Intercap con stock",
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/productos/no-image.jpg?pfdrid_c=true"
+  },
+  {
+    "nombre": "BOTA DELTA FORCE NEGRO TALLE 35/36",
+    "precio": 25431.33,
+    "descripcion": "Producto de Intercap con stock",
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/iconos/icono-album.png"
+  },
+  {
+    "nombre": "BOTA DELTA FORCE NEGRO TALLE 37/38",
+    "precio": 25431.33,
+    "descripcion": "Producto de Intercap con stock",
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/iconos/icono-album.png"
+  },
+  {
+    "nombre": "BOTA DELTA FORCE NEGRO TALLE 39/40",
+    "precio": 25431.33,
+    "descripcion": "Producto de Intercap con stock",
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/iconos/icono-album.png"
+  },
+  {
+    "nombre": "RESORTE DE ARRANQUE HONDA C-90 CC ELEVAN",
+    "precio": 69.39,
+    "descripcion": "Producto de Intercap con stock",
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/productos/MARCAS/elevan.jpg?pfdrid_c=true"
+  },
+  {
+    "nombre": "RESORTE DE ARRANQUE ZANELLA ELEVAN",
+    "precio": 92.33,
+    "descripcion": "Producto de Intercap con stock",
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/productos/019/46080054.jpg?pfdrid_c=true"
+  },
+  {
+    "nombre": "RESORTE EMBRAGUE CENTRIFUGO ELEVAN",
+    "precio": 20.81,
+    "descripcion": "Producto de Intercap con stock",
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/productos/019/RE003.jpg?pfdrid_c=true"
+  },
+  {
+    "nombre": "RESORTE MULETA CICLOMOTOR ELEVAN",
+    "precio": 35.03,
+    "descripcion": "Producto de Intercap con stock",
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/productos/019/46080250.jpg?pfdrid_c=true"
+  },
+  {
+    "nombre": "RESORTE MULETA HP DAX ST 70 CC",
+    "precio": 799.25,
+    "descripcion": "Producto de Intercap con stock",
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/productos/019/005020002.jpg?pfdrid_c=true"
+  },
+  {
+    "nombre": "RESORTE DE PEDAL DE FRENO SUZUKI AX 100 ELEVAN",
+    "precio": 117.09,
+    "descripcion": "Producto de Intercap con stock",
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/productos/no-image.jpg?pfdrid_c=true"
+  },
+  {
+    "nombre": "RESORTE DE PEDAL DE FRENO HONDA C-90 CC ELEVAN",
+    "precio": 117.09,
+    "descripcion": "Producto de Intercap con stock",
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/productos/MARCAS/elevan.jpg?pfdrid_c=true"
+  },
+  {
+    "nombre": "RESORTE DE PEDAL DE FRENO LARGO APPIA VECTRA 110 CC ELEVAN",
+    "precio": 117.09,
+    "descripcion": "Producto de Intercap con stock",
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/productos/019/46080157.jpg?pfdrid_c=true"
+  },
+  {
+    "nombre": "RESORTE HIDRAULICO SMASH ELEVAN",
+    "precio": 24.47,
+    "descripcion": "Producto de Intercap con stock",
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/productos/019/46080222.jpg?pfdrid_c=true"
+  },
+  {
+    "nombre": "RESORTE PORTA EQUIPAJE HP CENTRAL GILERA SMASH/HONDA WAVE DERECHO",
+    "precio": 593.76,
+    "descripcion": "Producto de Intercap con stock",
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/productos/019/16122019_019012020001-1_min.jpg?pfdrid_c=true"
+  },
+  {
+    "nombre": "RESORTE PORTA EQUIPAJE HP CENTRAL GILERA SMASH/HONDA WAVE IZQUIERDO",
+    "precio": 593.76,
+    "descripcion": "Producto de Intercap con stock",
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/productos/019/012020002.jpg?pfdrid_c=true"
+  },
+  {
+    "nombre": "RESORTE VALVULA INTERIOR COMP. BLANDOS KAYAK 150CC",
+    "precio": 288.91,
+    "descripcion": "Producto de Intercap con stock",
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/productos/no-image.jpg?pfdrid_c=true"
+  },
+  {
+    "nombre": "JUEGO RESORTES DE VALVULAS COMPETICION BBB MPI 2x INTERIOR HONDA CG 125/STORM",
+    "precio": 17706.63,
+    "descripcion": "Producto de Intercap con stock",
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/iconos/icono-album.png"
+  },
+  {
+    "nombre": "JUEGO RESORTES DE VALVULAS COMPETICION BBB MPI 2x SIMPLE BLANDOS GILERA SMASH/ZANELLA ZB/HONDA 250 TORNADO/TWISTER",
+    "precio": 18360.26,
+    "descripcion": "Producto de Intercap con stock",
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/iconos/icono-album.png"
+  },
+  {
+    "nombre": "4 REEMPLAZA PLATINO Y CONDENSADOR BOBINA  AMARILLA VOL CEV-DZE ZANELLA V1/V2/V3/DUE",
+    "precio": 27657.08,
+    "descripcion": "Producto de Intercap con stock",
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/productos/020/29052018_001010001-1_min.jpg?pfdrid_c=true"
+  },
+  {
+    "nombre": "5 REEMPLAZA PLATINO Y CONDENSADOR BOBINA  BLANCA VOL DZE VIEJO GARELLI/DA DALT/PUMITA/ZADINA",
+    "precio": 27657.08,
+    "descripcion": "Producto de Intercap con stock",
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/productos/020/29052018_001010002-1_min.jpg?pfdrid_c=true"
+  },
+  {
+    "nombre": "7 REEMPLAZA PLATINO Y CONDENSADOR BOBINA  GRIS VOL PUMA DE CHAPA PUMA 50",
+    "precio": 27915.96,
+    "descripcion": "Producto de Intercap con stock",
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/productos/020/29052018_001010003-1_min.jpg?pfdrid_c=true"
+  },
+  {
+    "nombre": "6 REEMPLAZA PLATINO Y CONDENSADOR BOBINA  NEGRA  VOL BOSCH DUCATI ZANELLA FIRE/DUE GL",
+    "precio": 27657.08,
+    "descripcion": "Producto de Intercap con stock",
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/productos/020/29052018_001010004-1_min.jpg?pfdrid_c=true"
+  },
+  {
+    "nombre": "2 REEMPLAZA PLATINO Y CONDENSADOR BOBINA  ROJO VOL MOTOPLAT JUKI/DA DALT/GARELLI",
+    "precio": 26529.86,
+    "descripcion": "Producto de Intercap con stock",
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/productos/020/29052018_001010005-1_min.jpg?pfdrid_c=true"
+  },
+  {
+    "nombre": "1 REEMPLAZA PLATINO Y CONDENSADOR BOBINA AZUL VOL MOTOPLAT ZANELLA V1/V2/V3/DUE/POCKET",
+    "precio": 26125.69,
+    "descripcion": "Producto de Intercap con stock",
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/iconos/icono-album.png"
+  },
+  {
+    "nombre": "8 ENCENDIDO ELECTRONICO BOBINA NEGRA VOL CEV ELECTRONICO GARELLI MATIC TEAM",
+    "precio": 29057.25,
+    "descripcion": "Producto de Intercap con stock",
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/productos/020/29052018_001010007-1_min.jpg?pfdrid_c=true"
+  },
+  {
+    "nombre": "3 REEMPLAZA PLATINO Y CONDENSADOR BOBINA VERDE VOL CEV JUKI DRIBBLING/GARELLI/DA DALT",
+    "precio": 27657.08,
+    "descripcion": "Producto de Intercap con stock",
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/productos/020/29052018_001010008-1_min.jpg?pfdrid_c=true"
+  },
+  {
+    "nombre": "14 CHAU PLATINO C/CHAVETA H DAX 70 ST MOD 93",
+    "precio": 30056.75,
+    "descripcion": "Producto de Intercap con stock",
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/productos/020/02112021_020001010009-1_min.jpg?pfdrid_c=true"
+  },
+  {
+    "nombre": "13 CHAU PLATINO C/CHAVETA H DAX 70-ECONOPOWER 90 HASTA 1995",
+    "precio": 31143.66,
+    "descripcion": "Producto de Intercap con stock",
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/productos/020/29052018_001010010-1_min.jpg?pfdrid_c=true"
+  },
+  {
+    "nombre": "17 CHAU PLATINO C/CHAVETA HONDA CG 125 PLATINERA CDI 2043/BOBINA 3057",
+    "precio": 32418.85,
+    "descripcion": "Producto de Intercap con stock",
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/productos/020/29052018_001010011-1_min.jpg?pfdrid_c=true"
+  },
+  {
+    "nombre": "15 CHAU PLATINO C/CHAVETA HERO PUCH 65 CDI 2013/BOBINA 3055",
+    "precio": 25575.38,
+    "descripcion": "Producto de Intercap con stock",
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/productos/020/29052018_001010012-1_min.jpg?pfdrid_c=true"
+  },
+  {
+    "nombre": "16 CHAU PLATINO C/CHAVETA YAMAHA RX 125 M 1981 CDI2013/BOBINA 3056",
+    "precio": 31252.02,
+    "descripcion": "Producto de Intercap con stock",
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/productos/020/29052018_001010013-1_min.jpg?pfdrid_c=true"
+  },
+  {
+    "nombre": "9 ENCENDIDO ELECTRONICO PARA CDI 2023 Y BOBINA 3006/3007 KINETIC SAFARI Y MAGNUM",
+    "precio": 40350.25,
+    "descripcion": "Producto de Intercap con stock",
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/iconos/icono-album.png"
+  },
+  {
+    "nombre": "11 CHAU PLATINO SIN CHAVETA PARA CDI 2164 Y BOBINA 3013",
+    "precio": 24956.73,
+    "descripcion": "Producto de Intercap con stock",
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/productos/020/02112021_020001010015-1_min.jpg?pfdrid_c=true"
+  },
+  {
+    "nombre": "104 ENCENDIDO COM. 12V CON AUTOAVANCE S/SENSOR UTILIZAR BOBINA ALTA 3213E DADALT/GARELLI",
+    "precio": 46465.63,
+    "descripcion": "Producto de Intercap con stock",
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/iconos/icono-album.png"
+  },
+  {
+    "nombre": "114 ENCENDIDO COM. 12V C/AUTOATRASO S/SENSOR UTILIZAR BOBINA ALTA 3213E DADALT/GARELLI",
+    "precio": 45402.08,
+    "descripcion": "Producto de Intercap con stock",
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/iconos/icono-album.png"
+  },
+  {
+    "nombre": "103 ENCENDIDO COM. 6V C/AUTOAVANCE UTILIZAR BOBINA ALTA 3213E ZANELLA",
+    "precio": 55668.48,
+    "descripcion": "Producto de Intercap con stock",
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/iconos/icono-album.png"
+  },
+  {
+    "nombre": "113 ENCENDIDO COM. 6V C/AUTOATRASO UTILIZAR BOBINA ALTA 3213E ZANELLA",
+    "precio": 51170.84,
+    "descripcion": "Producto de Intercap con stock",
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/iconos/icono-album.png"
+  },
+  {
+    "nombre": "115 ENCENDIDO COM. C/AUTOATRASO UTILIZAR BOBINA ALTA 3213E ZANELLA C/VOLANTE ZANELLA",
+    "precio": 45402.08,
+    "descripcion": "Producto de Intercap con stock",
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/iconos/icono-album.png"
+  },
+  {
+    "nombre": "102 ENCENDIDO COM. 6V C/AUTOAVANCE UTILIZAR BOBINA ALTA 3213E DADALT",
+    "precio": 55668.21,
+    "descripcion": "Producto de Intercap con stock",
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/iconos/icono-album.png"
+  },
+  {
+    "nombre": "101 ENCENDIDO COM. 6V C/AUTOAVANCE C/SENSOR UTILIZAR BOBINA ALTA 3213E JUKI",
+    "precio": 48591.75,
+    "descripcion": "Producto de Intercap con stock",
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/iconos/icono-album.png"
+  },
+  {
+    "nombre": "111 ENCENDIDO COMPETICION 6V CON AUTOATRASO ELECTRONICO UTILIZAR BOBINA ALTA 3213E  ANTIHORARIO",
+    "precio": 45461.1,
+    "descripcion": "Producto de Intercap con stock",
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/iconos/icono-album.png"
+  },
+  {
+    "nombre": "205 CONJUNTO PLAQUETA ENC C/BOBINAS DE ALIMENTACION 3046 Y LUCES 3047 PARA C/BOBINA ALTA 3202 EJ:ZANELLA",
+    "precio": 38043.45,
+    "descripcion": "Producto de Intercap con stock",
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/iconos/icono-album.png"
+  },
+  {
+    "nombre": "204 PLAQUETA DE ENCENDIDO SOLA KINETIC",
+    "precio": 6221.11,
+    "descripcion": "Producto de Intercap con stock",
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/iconos/icono-album.png"
+  },
+  {
+    "nombre": "203 PLAQUETA DE ENCENDIDO SEMICOMPETICION AUTOATRASO C/BOBINA DE LUCES 25 WATT EJ:ZANELLA CICLOMOTOR",
+    "precio": 36031.01,
+    "descripcion": "Producto de Intercap con stock",
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/iconos/icono-album.png"
+  },
+  {
+    "nombre": "202 PLAQUETA ENCENDIDO SOLA TIPO DUCATI CON O SIN SENSOR",
+    "precio": 6213.81,
+    "descripcion": "Producto de Intercap con stock",
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/iconos/icono-album.png"
+  },
+  {
+    "nombre": "201 PLAQUETA ENCENDIDO C/BOBINAS STANDARD EJ:ZANELLA CICLOMOTOR",
+    "precio": 36164.92,
+    "descripcion": "Producto de Intercap con stock",
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/productos/020/29052018_001010028-1_min.jpg?pfdrid_c=true"
+  },
+  {
+    "nombre": "10 ENCENDIDO ELECTRONICO REEMPLAZA PLATINO Y CONDENSADOR  CDI 2164 BOBINA 3016 EJ:ZANELLA 100/125/175/180",
+    "precio": 34061.85,
+    "descripcion": "Producto de Intercap con stock",
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/productos/020/29052018_001010029-1_min.jpg?pfdrid_c=true"
+  }
+]

@@ -47,11 +47,16 @@ app.use((req, res, next) => {
 })
 
 app.get("/", (req, res) => {
-  res.render("index", {
-  username: res.locals.user?.username || null,
-  user: res.locals.user})
+  const dataPath = path.join(__dirname, "data", "ofertas.json")
+  const productos = JSON.parse(fs.readFileSync(dataPath, "utf-8"))
 
+  res.render("index", {
+    username: res.locals.user?.username || null,
+    user: res.locals.user,
+    productos
+  })
 })
+
 
 app.get("/protected", (req, res) => {
   if (!res.locals.user) return res.redirect("/")
@@ -69,17 +74,26 @@ app.get("/login", (req, res) => {
   })
 })
 
+app.get("/ofertas", (req, res) => {
+  const productos = JSON.parse(fs.readFileSync("./data/ofertas.json"))
+  res.render("ofertas", { productos, user: res.locals.user })
+})
+
 app.get("/productos", (req, res) => {
-  const productos = JSON.parse(fs.readFileSync("./data/productos.json"))
+  const productos = JSON.parse(fs.readFileSync("./data/productos.json", "utf-8"))
+  const ofertas = JSON.parse(fs.readFileSync("./data/ofertas.json", "utf-8"))
   const termino = req.query.buscar?.toLowerCase() || ""
 
   const filtrados = productos.filter(p =>
     p.nombre.toLowerCase().includes(termino)
   )
 
-  res.render("productos", { productos: filtrados, user: res.locals.user })
+  res.render("productos", {
+    productos: filtrados,
+    ofertas,
+    user: res.locals.user
+  })
 })
-
 
 ///////////////////////////////////////////////////////////////////////////
 ///////////////////////app.post////////////////////////////////////////////
