@@ -1,24 +1,13 @@
 <main class="max-w-screen-xl mx-auto px-4">
 
-  <!-- Carrusel de ofertas -->
-  <h2 class="text-2xl font-bold mt-8 mb-4">🔥 Ofertas destacadas</h2>
-  <div class="relative">
-    <div id="carousel" class="flex overflow-x-auto gap-4 scroll-smooth snap-x snap-mandatory pb-4">
-      <% ofertas.forEach((p, i) => { %>
-        <div class="min-w-[250px] bg-white rounded shadow p-4 snap-start flex-shrink-0">
-          <img src="<%= p.imagen %>" alt="<%= p.nombre %>" class="w-full h-40 object-contain mb-3" />
-          <h3 class="font-bold text-gray-900"><%= p.nombre %></h3>
-          <p class="text-blue-700 font-semibold">$ <%= p.precio %></p>
-        </div>
-      <% }); %>
-    </div>
-  </div>
-
   <!-- Resultados de búsqueda -->
   <h2 class="text-2xl font-bold mt-12 mb-4">🔍 Resultados de tu búsqueda</h2>
+
   <% if (productos.length === 0) { %>
     <p class="text-center text-gray-600 mt-10">No se encontraron productos.</p>
   <% } else { %>
+    <p class="text-gray-700 mb-4">Se encontraron <strong><%= totalResultados %></strong> productos para "<%= termino %>".</p>
+
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-6">
       <% productos.forEach((p) => { %>
         <div class="bg-white rounded shadow p-4">
@@ -28,6 +17,62 @@
         </div>
       <% }); %>
     </div>
+
+    <!-- Paginación -->
+    <div class="flex justify-center mt-10 gap-2">
+      <% if (paginaActual > 1) { %>
+        <a href="/productos?page=<%= paginaActual - 1 %>&buscar=<%= termino %>"
+           class="px-3 py-2 rounded bg-gray-200 text-blue-800 hover:bg-blue-100 font-semibold">← Anterior</a>
+      <% } %>
+
+      <% for (let i = 1; i <= totalPaginas; i++) { %>
+        <a 
+          href="/productos?page=<%= i %>&buscar=<%= termino %>"
+          class="px-3 py-2 rounded font-semibold 
+            <%= i === paginaActual ? 'bg-blue-800 text-white' : 'bg-gray-200 text-blue-800 hover:bg-blue-100' %>">
+          <%= i %>
+        </a>
+      <% } %>
+
+      <% if (paginaActual < totalPaginas) { %>
+        <a href="/productos?page=<%= paginaActual + 1 %>&buscar=<%= termino %>"
+           class="px-3 py-2 rounded bg-gray-200 text-blue-800 hover:bg-blue-100 font-semibold">Siguiente →</a>
+      <% } %>
+    </div>
   <% } %>
+  <!-- Paginación -->
+<% if (totalPaginas > 1) { %>
+  <div class="flex justify-center items-center gap-1 mt-10 flex-wrap">
+
+    <% if (paginaActual > 1) { %>
+      <a href="?buscar=<%= termino %>&page=<%= paginaActual - 1 %>" class="px-3 py-2 bg-gray-200 text-sm rounded hover:bg-gray-300">
+        « Anterior
+      </a>
+    <% } %>
+
+    <% 
+      const mostrar = 5
+      let inicio = Math.max(1, paginaActual - Math.floor(mostrar / 2))
+      let fin = Math.min(totalPaginas, inicio + mostrar - 1)
+      if (fin - inicio < mostrar - 1) inicio = Math.max(1, fin - mostrar + 1)
+    %>
+
+    <% for (let i = inicio; i <= fin; i++) { %>
+      <a
+        href="?buscar=<%= termino %>&page=<%= i %>"
+        class="px-3 py-2 rounded text-sm <%= i === paginaActual ? 'bg-blue-800 text-white font-bold' : 'bg-gray-200 hover:bg-gray-300' %>">
+        <%= i %>
+      </a>
+    <% } %>
+
+    <% if (paginaActual < totalPaginas) { %>
+      <a href="?buscar=<%= termino %>&page=<%= paginaActual + 1 %>" class="px-3 py-2 bg-gray-200 text-sm rounded hover:bg-gray-300">
+        Siguiente »
+      </a>
+    <% } %>
+
+  </div>
+<% } %>
+
 
 </main>

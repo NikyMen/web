@@ -82,18 +82,33 @@ app.get("/ofertas", (req, res) => {
 app.get("/productos", (req, res) => {
   const productos = JSON.parse(fs.readFileSync("./data/productos.json", "utf-8"))
   const ofertas = JSON.parse(fs.readFileSync("./data/ofertas.json", "utf-8"))
-  const termino = req.query.buscar?.toLowerCase() || ""
 
+  const termino = req.query.buscar?.toLowerCase() || ""
+  const page = parseInt(req.query.page) || 1
+  const limit = 24
+  const offset = (page - 1) * limit
+
+  // Filtro por término de búsqueda
   const filtrados = productos.filter(p =>
     p.nombre.toLowerCase().includes(termino)
   )
 
+  const paginados = filtrados.slice(offset, offset + limit)
+  const totalPaginas = Math.ceil(filtrados.length / limit)
+  const totalResultados = filtrados.length
+
   res.render("productos", {
-    productos: filtrados,
+    productos: paginados,
     ofertas,
-    user: res.locals.user
+    user: res.locals.user,
+    paginaActual: page,
+    totalPaginas,
+    totalResultados,
+    termino
   })
 })
+
+
 
 ///////////////////////////////////////////////////////////////////////////
 ///////////////////////app.post////////////////////////////////////////////
