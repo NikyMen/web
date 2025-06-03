@@ -1,230 +1,58 @@
 [
 {
-    "nombre": "JUEGO DE CUBIERTAS CALLE HDMA005 (3.50-10)",
-    "precio": 41884.15,
+    "codigo": "020010010009902642",
+    "nombre": "2380RR CDI RACING PARA MOTOS CHINAS HASTA 200CC ( ALIM. A MAGNETO) 1T. 5 PINES CUADRADOS",
+    "precio": 11734.35,
     "descripcion": "Repuestos Mendez",
-    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/productos/999/06122021_999006280030-1_min.jpg?pfdrid_c=true"
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/productos/020/05062018_010010009-1_min.jpg?pfdrid_c=true"
   },
   {
-    "nombre": "JUEGO DE CUBIERTAS CELIMO HD-565 (110/70-17)(140/60-17)",
-    "precio": 121931.44,
+    "codigo": "0200100100101027310",
+    "nombre": "2379R CDI RACING PARA MOTOS CHINAS HASTA 200CC (ALIM. A MAGNETO) 2T. 6 PINES CUADRADOS",
+    "precio": 13355.03,
     "descripcion": "Repuestos Mendez",
-    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/productos/999/20072021_999006290005-1_min.jpg?pfdrid_c=true"
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/productos/020/05062018_010010010-1_min.jpg?pfdrid_c=true"
   },
   {
-    "nombre": "JUEGO DE CUBIERTAS CELIMO HD-608 (120/70-17)(150/60-17)",
-    "precio": 154386.92,
+    "codigo": "0200100100111117225",
+    "nombre": "2379RR CDI RACING PARA MOTOS CHINAS HASTA 200CC (ALIM. A MAGNETO) 2T. 6 PINES CUADRADOS",
+    "precio": 14523.93,
     "descripcion": "Repuestos Mendez",
-    "imagen": "https://scontent.fros8-1.fna.fbcdn.net/v/t39.30808-6/468496061_122119145726559897_4790477508360285942_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=ABa3ZCAymWMQ7kNvwGQC0ZP&_nc_oc=Adm8owE6agqu9R4gev2D5Pes6_feEynzRin__gB-mHaA5Bf8YtmogAZGRbDg-MLSOSY&_nc_zt=23&_nc_ht=scontent.fros8-1.fna&_nc_gid=NIX6Sls1FDE5mEzKQgy2Og&oh=00_AfJpoUHgbNqXgXJDO5amx4823UCIH0T7-PMFQ8nu9Uowwg&oe=683F7BC2"
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/productos/020/05062018_010010011-1_min.jpg?pfdrid_c=true"
   },
   {
-    "nombre": "JUEGO DE CUBIERTAS KAROO STREET  (90/90-21)(120/80-18)",
-    "precio": 268656.9,
+    "codigo": "020010010012974095",
+    "nombre": "2378R CDI RACING PARA MOTOS CHINAS HASTA 200CC (ALIM. A MAGNETO) 2T. 6 PINES REDONDOS",
+    "precio": 12663.24,
     "descripcion": "Repuestos Mendez",
-    "imagen": "https://scontent.fros8-1.fna.fbcdn.net/v/t39.30808-6/468496061_122119145726559897_4790477508360285942_n.jpg?_nc_cat=104&amp;ccb=1-7&amp;_nc_sid=6ee11a&amp;_nc_ohc=ABa3ZCAymWMQ7kNvwGQC0ZP&amp;_nc_oc=Adm8owE6agqu9R4gev2D5Pes6_feEynzRin__gB-mHaA5Bf8YtmogAZGRbDg-MLSOSY&amp;_nc_zt=23&amp;_nc_ht=scontent.fros8-1.fna&amp;_nc_gid=9JPLTjZ0hOfaJeiWi7yB4g&amp;oh=00_AfJmj7mMChBKJaOJZb8g_9bNkRGq5N4f7ss9LIKAez51Iw&amp;oe=683E6282"
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/productos/020/05062018_010010012-1_min.jpg?pfdrid_c=true"
   },
   {
-    "nombre": "JUEGO DE CUBIERTAS ENDURO 3 SAHARA (90/90-21)(120/80-18)",
-    "precio": 222542.6,
+    "codigo": "0200100100131072982",
+    "nombre": "2378RR CDI RACING PARA MOTOS CHINAS HASTA 200CC (ALIM. A MAGNETO) 2T. 6 PINES REDONDOS",
+    "precio": 13948.77,
     "descripcion": "Repuestos Mendez",
-    "imagen": "https://scontent.fros8-1.fna.fbcdn.net/v/t39.30808-6/468496061_122119145726559897_4790477508360285942_n.jpg?_nc_cat=104&amp;ccb=1-7&amp;_nc_sid=6ee11a&amp;_nc_ohc=ABa3ZCAymWMQ7kNvwGQC0ZP&amp;_nc_oc=Adm8owE6agqu9R4gev2D5Pes6_feEynzRin__gB-mHaA5Bf8YtmogAZGRbDg-MLSOSY&amp;_nc_zt=23&amp;_nc_ht=scontent.fros8-1.fna&amp;_nc_gid=9JPLTjZ0hOfaJeiWi7yB4g&amp;oh=00_AfJmj7mMChBKJaOJZb8g_9bNkRGq5N4f7ss9LIKAez51Iw&amp;oe=683E6282"
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/productos/020/05062018_010010013-1_min.jpg?pfdrid_c=true"
   },
   {
-    "nombre": "JUEGO DE CUBIERTAS SPORTEC M5 (100/80R17)(140/60R17)",
-    "precio": 299436.88,
+    "codigo": "020010010014793310",
+    "nombre": "2030 CDI ADLY 100/LEAD 80/SIAMBRETTA 50/ 6 PINES",
+    "precio": 10313.03,
     "descripcion": "Repuestos Mendez",
-    "imagen": "https://scontent.fros8-1.fna.fbcdn.net/v/t39.30808-6/468496061_122119145726559897_4790477508360285942_n.jpg?_nc_cat=104&amp;ccb=1-7&amp;_nc_sid=6ee11a&amp;_nc_ohc=ABa3ZCAymWMQ7kNvwGQC0ZP&amp;_nc_oc=Adm8owE6agqu9R4gev2D5Pes6_feEynzRin__gB-mHaA5Bf8YtmogAZGRbDg-MLSOSY&amp;_nc_zt=23&amp;_nc_ht=scontent.fros8-1.fna&amp;_nc_gid=9JPLTjZ0hOfaJeiWi7yB4g&amp;oh=00_AfJmj7mMChBKJaOJZb8g_9bNkRGq5N4f7ss9LIKAez51Iw&amp;oe=683E6282"
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/productos/020/06092018_010010014-1_min.jpg?pfdrid_c=true"
   },
   {
-    "nombre": "JUEGO DE CUBIERTAS SPORTEC M5 (110/70R17)(140/70R17)",
-    "precio": 307117.96,
+    "codigo": "020010010015913565",
+    "nombre": "2039 CDI ADLY 50/ZANELLA SPORT 100 SCOOTER",
+    "precio": 11876.34,
     "descripcion": "Repuestos Mendez",
-    "imagen": "https://scontent.fros8-1.fna.fbcdn.net/v/t39.30808-6/468496061_122119145726559897_4790477508360285942_n.jpg?_nc_cat=104&amp;ccb=1-7&amp;_nc_sid=6ee11a&amp;_nc_ohc=ABa3ZCAymWMQ7kNvwGQC0ZP&amp;_nc_oc=Adm8owE6agqu9R4gev2D5Pes6_feEynzRin__gB-mHaA5Bf8YtmogAZGRbDg-MLSOSY&amp;_nc_zt=23&amp;_nc_ht=scontent.fros8-1.fna&amp;_nc_gid=9JPLTjZ0hOfaJeiWi7yB4g&amp;oh=00_AfJmj7mMChBKJaOJZb8g_9bNkRGq5N4f7ss9LIKAez51Iw&amp;oe=683E6282"
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/productos/020/06092018_010010015-1_min.jpg?pfdrid_c=true"
   },
   {
-    "nombre": "JUEGO DE CUBIERTAS ENDURO 3 SAHARA (90/90-19)(110/90-17)",
-    "precio": 261281.96,
+    "codigo": "0200100100161028325",
+    "nombre": "2214 CDI AGRALE CAGIVA CUSTOM 125",
+    "precio": 13368.23,
     "descripcion": "Repuestos Mendez",
-    "imagen": "https://scontent.fros8-1.fna.fbcdn.net/v/t39.30808-6/468496061_122119145726559897_4790477508360285942_n.jpg?_nc_cat=104&amp;ccb=1-7&amp;_nc_sid=6ee11a&amp;_nc_ohc=ABa3ZCAymWMQ7kNvwGQC0ZP&amp;_nc_oc=Adm8owE6agqu9R4gev2D5Pes6_feEynzRin__gB-mHaA5Bf8YtmogAZGRbDg-MLSOSY&amp;_nc_zt=23&amp;_nc_ht=scontent.fros8-1.fna&amp;_nc_gid=9JPLTjZ0hOfaJeiWi7yB4g&amp;oh=00_AfJmj7mMChBKJaOJZb8g_9bNkRGq5N4f7ss9LIKAez51Iw&amp;oe=683E6282"
-  },
-  {
-    "nombre": "JUEGO DE CUBIERTAS TOURANCE (110/80-19)(150/70R17)",
-    "precio": 373381.2,
-    "descripcion": "Repuestos Mendez",
-    "imagen": "https://scontent.fros8-1.fna.fbcdn.net/v/t39.30808-6/468496061_122119145726559897_4790477508360285942_n.jpg?_nc_cat=104&amp;ccb=1-7&amp;_nc_sid=6ee11a&amp;_nc_ohc=ABa3ZCAymWMQ7kNvwGQC0ZP&amp;_nc_oc=Adm8owE6agqu9R4gev2D5Pes6_feEynzRin__gB-mHaA5Bf8YtmogAZGRbDg-MLSOSY&amp;_nc_zt=23&amp;_nc_ht=scontent.fros8-1.fna&amp;_nc_gid=9JPLTjZ0hOfaJeiWi7yB4g&amp;oh=00_AfJmj7mMChBKJaOJZb8g_9bNkRGq5N4f7ss9LIKAez51Iw&amp;oe=683E6282"
-  },
-  {
-    "nombre": "JUEGO DE CUBIERTAS PROTORQ EXTREME (110/70ZR-17) (140/70R-17)",
-    "precio": 160431.04,
-    "descripcion": "Repuestos Mendez",
-    "imagen": "https://scontent.fros8-1.fna.fbcdn.net/v/t39.30808-6/468496061_122119145726559897_4790477508360285942_n.jpg?_nc_cat=104&amp;ccb=1-7&amp;_nc_sid=6ee11a&amp;_nc_ohc=ABa3ZCAymWMQ7kNvwGQC0ZP&amp;_nc_oc=Adm8owE6agqu9R4gev2D5Pes6_feEynzRin__gB-mHaA5Bf8YtmogAZGRbDg-MLSOSY&amp;_nc_zt=23&amp;_nc_ht=scontent.fros8-1.fna&amp;_nc_gid=9JPLTjZ0hOfaJeiWi7yB4g&amp;oh=00_AfJmj7mMChBKJaOJZb8g_9bNkRGq5N4f7ss9LIKAez51Iw&amp;oe=683E6282"
-  },
-  {
-    "nombre": "JUEGO DE CUBIERTAS PROTORQ EXTREME (110/70ZR-17) (140/60R-17)",
-    "precio": 158638.37,
-    "descripcion": "Repuestos Mendez",
-    "imagen": "https://scontent.fros8-1.fna.fbcdn.net/v/t39.30808-6/468496061_122119145726559897_4790477508360285942_n.jpg?_nc_cat=104&amp;ccb=1-7&amp;_nc_sid=6ee11a&amp;_nc_ohc=ABa3ZCAymWMQ7kNvwGQC0ZP&amp;_nc_oc=Adm8owE6agqu9R4gev2D5Pes6_feEynzRin__gB-mHaA5Bf8YtmogAZGRbDg-MLSOSY&amp;_nc_zt=23&amp;_nc_ht=scontent.fros8-1.fna&amp;_nc_gid=9JPLTjZ0hOfaJeiWi7yB4g&amp;oh=00_AfJmj7mMChBKJaOJZb8g_9bNkRGq5N4f7ss9LIKAez51Iw&amp;oe=683E6282"
-  },
-  {
-    "nombre": "JUEGO DE CUBIERTAS PROTORQ EXTREME (110/70ZR-17) (150/60ZR-17)",
-    "precio": 173153.11,
-    "descripcion": "Repuestos Mendez",
-    "imagen": "https://scontent.fros8-1.fna.fbcdn.net/v/t39.30808-6/468496061_122119145726559897_4790477508360285942_n.jpg?_nc_cat=104&amp;ccb=1-7&amp;_nc_sid=6ee11a&amp;_nc_ohc=ABa3ZCAymWMQ7kNvwGQC0ZP&amp;_nc_oc=Adm8owE6agqu9R4gev2D5Pes6_feEynzRin__gB-mHaA5Bf8YtmogAZGRbDg-MLSOSY&amp;_nc_zt=23&amp;_nc_ht=scontent.fros8-1.fna&amp;_nc_gid=9JPLTjZ0hOfaJeiWi7yB4g&amp;oh=00_AfJmj7mMChBKJaOJZb8g_9bNkRGq5N4f7ss9LIKAez51Iw&amp;oe=683E6282"
-  },
-  {
-    "nombre": "JUEGO DE CUBIERTAS BEE CONNECT  (100/80-16) (120/80-16)",
-    "precio": 144590.49,
-    "descripcion": "Repuestos Mendez",
-    "imagen": "https://scontent.fros8-1.fna.fbcdn.net/v/t39.30808-6/468496061_122119145726559897_4790477508360285942_n.jpg?_nc_cat=104&amp;ccb=1-7&amp;_nc_sid=6ee11a&amp;_nc_ohc=ABa3ZCAymWMQ7kNvwGQC0ZP&amp;_nc_oc=Adm8owE6agqu9R4gev2D5Pes6_feEynzRin__gB-mHaA5Bf8YtmogAZGRbDg-MLSOSY&amp;_nc_zt=23&amp;_nc_ht=scontent.fros8-1.fna&amp;_nc_gid=9JPLTjZ0hOfaJeiWi7yB4g&amp;oh=00_AfJmj7mMChBKJaOJZb8g_9bNkRGq5N4f7ss9LIKAez51Iw&amp;oe=683E6282"
-  },
-  {
-    "nombre": "JUEGO DE CUBIERTAS BEE CONNECT  (100/80-16) (120/80-14)",
-    "precio": 143836.02,
-    "descripcion": "Repuestos Mendez",
-    "imagen": "https://scontent.fros8-1.fna.fbcdn.net/v/t39.30808-6/468496061_122119145726559897_4790477508360285942_n.jpg?_nc_cat=104&amp;ccb=1-7&amp;_nc_sid=6ee11a&amp;_nc_ohc=ABa3ZCAymWMQ7kNvwGQC0ZP&amp;_nc_oc=Adm8owE6agqu9R4gev2D5Pes6_feEynzRin__gB-mHaA5Bf8YtmogAZGRbDg-MLSOSY&amp;_nc_zt=23&amp;_nc_ht=scontent.fros8-1.fna&amp;_nc_gid=9JPLTjZ0hOfaJeiWi7yB4g&amp;oh=00_AfJmj7mMChBKJaOJZb8g_9bNkRGq5N4f7ss9LIKAez51Iw&amp;oe=683E6282"
-  },
-  {
-    "nombre": "JUEGO DE CUBIERTAS BEE CONNECT  (120/80-14) (150/70-13)",
-    "precio": 189850.55,
-    "descripcion": "Repuestos Mendez",
-    "imagen": "https://scontent.fros8-1.fna.fbcdn.net/v/t39.30808-6/468496061_122119145726559897_4790477508360285942_n.jpg?_nc_cat=104&amp;ccb=1-7&amp;_nc_sid=6ee11a&amp;_nc_ohc=ABa3ZCAymWMQ7kNvwGQC0ZP&amp;_nc_oc=Adm8owE6agqu9R4gev2D5Pes6_feEynzRin__gB-mHaA5Bf8YtmogAZGRbDg-MLSOSY&amp;_nc_zt=23&amp;_nc_ht=scontent.fros8-1.fna&amp;_nc_gid=9JPLTjZ0hOfaJeiWi7yB4g&amp;oh=00_AfJmj7mMChBKJaOJZb8g_9bNkRGq5N4f7ss9LIKAez51Iw&amp;oe=683E6282"
-  },
-  {
-    "nombre": "JUEGO DE CUBIERTAS BEE CONNECT  (110/70-11) (120/70-10)",
-    "precio": 102004.05,
-    "descripcion": "Repuestos Mendez",
-    "imagen": "https://scontent.fros8-1.fna.fbcdn.net/v/t39.30808-6/468496061_122119145726559897_4790477508360285942_n.jpg?_nc_cat=104&amp;ccb=1-7&amp;_nc_sid=6ee11a&amp;_nc_ohc=ABa3ZCAymWMQ7kNvwGQC0ZP&amp;_nc_oc=Adm8owE6agqu9R4gev2D5Pes6_feEynzRin__gB-mHaA5Bf8YtmogAZGRbDg-MLSOSY&amp;_nc_zt=23&amp;_nc_ht=scontent.fros8-1.fna&amp;_nc_gid=9JPLTjZ0hOfaJeiWi7yB4g&amp;oh=00_AfJmj7mMChBKJaOJZb8g_9bNkRGq5N4f7ss9LIKAez51Iw&amp;oe=683E6282"
-  },
-  {
-    "nombre": "JUEGO DE CUBIERTAS BEE CONNECT  (120/70-12) (130/70-12)",
-    "precio": 138121.12,
-    "descripcion": "Repuestos Mendez",
-    "imagen": "https://scontent.fros8-1.fna.fbcdn.net/v/t39.30808-6/468496061_122119145726559897_4790477508360285942_n.jpg?_nc_cat=104&amp;ccb=1-7&amp;_nc_sid=6ee11a&amp;_nc_ohc=ABa3ZCAymWMQ7kNvwGQC0ZP&amp;_nc_oc=Adm8owE6agqu9R4gev2D5Pes6_feEynzRin__gB-mHaA5Bf8YtmogAZGRbDg-MLSOSY&amp;_nc_zt=23&amp;_nc_ht=scontent.fros8-1.fna&amp;_nc_gid=9JPLTjZ0hOfaJeiWi7yB4g&amp;oh=00_AfJmj7mMChBKJaOJZb8g_9bNkRGq5N4f7ss9LIKAez51Iw&amp;oe=683E6282"
-  },
-  {
-    "nombre": "JUEGO DE CUBIERTAS BEE CONNECT  (120/70-14) (140/60-13)",
-    "precio": 153395.76,
-    "descripcion": "Repuestos Mendez",
-    "imagen": "https://scontent.fros8-1.fna.fbcdn.net/v/t39.30808-6/468496061_122119145726559897_4790477508360285942_n.jpg?_nc_cat=104&amp;ccb=1-7&amp;_nc_sid=6ee11a&amp;_nc_ohc=ABa3ZCAymWMQ7kNvwGQC0ZP&amp;_nc_oc=Adm8owE6agqu9R4gev2D5Pes6_feEynzRin__gB-mHaA5Bf8YtmogAZGRbDg-MLSOSY&amp;_nc_zt=23&amp;_nc_ht=scontent.fros8-1.fna&amp;_nc_gid=9JPLTjZ0hOfaJeiWi7yB4g&amp;oh=00_AfJmj7mMChBKJaOJZb8g_9bNkRGq5N4f7ss9LIKAez51Iw&amp;oe=683E6282"
-  },
-  {
-    "nombre": "JUEGO DE CUBIERTAS BEE CONNECT  (110/70-16) (140/70-16)",
-    "precio": 113217.87,
-    "descripcion": "Repuestos Mendez",
-    "imagen": "https://scontent.fros8-1.fna.fbcdn.net/v/t39.30808-6/468496061_122119145726559897_4790477508360285942_n.jpg?_nc_cat=104&amp;ccb=1-7&amp;_nc_sid=6ee11a&amp;_nc_ohc=ABa3ZCAymWMQ7kNvwGQC0ZP&amp;_nc_oc=Adm8owE6agqu9R4gev2D5Pes6_feEynzRin__gB-mHaA5Bf8YtmogAZGRbDg-MLSOSY&amp;_nc_zt=23&amp;_nc_ht=scontent.fros8-1.fna&amp;_nc_gid=9JPLTjZ0hOfaJeiWi7yB4g&amp;oh=00_AfJmj7mMChBKJaOJZb8g_9bNkRGq5N4f7ss9LIKAez51Iw&amp;oe=683E6282"
-  },
-  {
-    "nombre": "JUEGO DE CUBIERTAS EUROGRIP BEE CONNECT (120/70-14) (140/60-14)",
-    "precio": 158288.13,
-    "descripcion": "Repuestos Mendez",
-    "imagen": "https://scontent.fros8-1.fna.fbcdn.net/v/t39.30808-6/468496061_122119145726559897_4790477508360285942_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=ABa3ZCAymWMQ7kNvwGQC0ZP&_nc_oc=Adm8owE6agqu9R4gev2D5Pes6_feEynzRin__gB-mHaA5Bf8YtmogAZGRbDg-MLSOSY&_nc_zt=23&_nc_ht=scontent.fros8-1.fna&_nc_gid=NIX6Sls1FDE5mEzKQgy2Og&oh=00_AfJpoUHgbNqXgXJDO5amx4823UCIH0T7-PMFQ8nu9Uowwg&oe=683F7BC2"
-  },
-  {
-    "nombre": "JUEGO DE CUBIERTAS EUROGRIP CONTA 625S + CONTA 625N (90/90-12) (90/100-10)",
-    "precio": 85681.61,
-    "descripcion": "Repuestos Mendez",
-    "imagen": "https://scontent.fros8-1.fna.fbcdn.net/v/t39.30808-6/468496061_122119145726559897_4790477508360285942_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=ABa3ZCAymWMQ7kNvwGQC0ZP&_nc_oc=Adm8owE6agqu9R4gev2D5Pes6_feEynzRin__gB-mHaA5Bf8YtmogAZGRbDg-MLSOSY&_nc_zt=23&_nc_ht=scontent.fros8-1.fna&_nc_gid=NIX6Sls1FDE5mEzKQgy2Og&oh=00_AfJpoUHgbNqXgXJDO5amx4823UCIH0T7-PMFQ8nu9Uowwg&oe=683F7BC2"
-  },
-  {
-    "nombre": "JUEGO DE CUBIERTAS EUROGRIP BEE CONNECT (90/90-12) (3.50-10)",
-    "precio": 88301.11,
-    "descripcion": "Repuestos Mendez",
-    "imagen": "https://scontent.fros8-1.fna.fbcdn.net/v/t39.30808-6/468496061_122119145726559897_4790477508360285942_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=ABa3ZCAymWMQ7kNvwGQC0ZP&_nc_oc=Adm8owE6agqu9R4gev2D5Pes6_feEynzRin__gB-mHaA5Bf8YtmogAZGRbDg-MLSOSY&_nc_zt=23&_nc_ht=scontent.fros8-1.fna&_nc_gid=NIX6Sls1FDE5mEzKQgy2Og&oh=00_AfJpoUHgbNqXgXJDO5amx4823UCIH0T7-PMFQ8nu9Uowwg&oe=683F7BC2"
-  },
-  {
-    "nombre": "JUEGO DE CUBIERTAS EUROGRIP BEE CONNECT + CONTA 775R (90/90-12) (110/90-10)",
-    "precio": 93907.74,
-    "descripcion": "Repuestos Mendez",
-    "imagen": "https://scontent.fros8-1.fna.fbcdn.net/v/t39.30808-6/468496061_122119145726559897_4790477508360285942_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=ABa3ZCAymWMQ7kNvwGQC0ZP&_nc_oc=Adm8owE6agqu9R4gev2D5Pes6_feEynzRin__gB-mHaA5Bf8YtmogAZGRbDg-MLSOSY&_nc_zt=23&_nc_ht=scontent.fros8-1.fna&_nc_gid=NIX6Sls1FDE5mEzKQgy2Og&oh=00_AfJpoUHgbNqXgXJDO5amx4823UCIH0T7-PMFQ8nu9Uowwg&oe=683F7BC2"
-  },
-  {
-    "nombre": "JUEGO DE CUBIERTAS EUROGRIP BEE CONNECT (90/90-14) (100/90-14)",
-    "precio": 123565.2,
-    "descripcion": "Repuestos Mendez",
-    "imagen": "https://scontent.fros8-1.fna.fbcdn.net/v/t39.30808-6/468496061_122119145726559897_4790477508360285942_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=ABa3ZCAymWMQ7kNvwGQC0ZP&_nc_oc=Adm8owE6agqu9R4gev2D5Pes6_feEynzRin__gB-mHaA5Bf8YtmogAZGRbDg-MLSOSY&_nc_zt=23&_nc_ht=scontent.fros8-1.fna&_nc_gid=NIX6Sls1FDE5mEzKQgy2Og&oh=00_AfJpoUHgbNqXgXJDO5amx4823UCIH0T7-PMFQ8nu9Uowwg&oe=683F7BC2"
-  },
-  {
-    "nombre": "JUEGO DE FILTROS YAMAHA FZ16 (AIRE Y ACEITE) WEGA",
-    "precio": 14069.83,
-    "descripcion": "Repuestos Mendez",
-    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/productos/999/29012024_999007070001-1_min.jpg?pfdrid_c=true"
-  },
-  {
-    "nombre": "JUEGO CAMARA SUPER HORSE 2.75/3.00-14 / 2.25/2.50-17 TR4",
-    "precio": 5375.36,
-    "descripcion": "Repuestos Mendez",
-    "imagen": "https://scontent.fros8-1.fna.fbcdn.net/v/t39.30808-6/468496061_122119145726559897_4790477508360285942_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=ABa3ZCAymWMQ7kNvwGQC0ZP&_nc_oc=Adm8owE6agqu9R4gev2D5Pes6_feEynzRin__gB-mHaA5Bf8YtmogAZGRbDg-MLSOSY&_nc_zt=23&_nc_ht=scontent.fros8-1.fna&_nc_gid=NIX6Sls1FDE5mEzKQgy2Og&oh=00_AfJpoUHgbNqXgXJDO5amx4823UCIH0T7-PMFQ8nu9Uowwg&oe=683F7BC2"
-  },
-  {
-    "nombre": "JUEGO DE FAROS DELANTERO/TRASERO BAJAJ ROUSER 180",
-    "precio": 44366.73,
-    "descripcion": "Repuestos Mendez",
-    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/productos/999/31012018_011260012_min.jpg?pfdrid_c=true"
-  },
-  {
-    "nombre": "JUEGO DE FAROS DELANTERO/TRASERO HONDA CB 190 R",
-    "precio": 174115.61,
-    "descripcion": "Repuestos Mendez",
-    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/productos/999/13022019_999011260020_min.jpg?pfdrid_c=true"
-  },
-  {
-    "nombre": "1 CAJA DE BUJIAS WEGA 10 UNIDADES DE W-M14YC (D8EA)",
-    "precio": 21392.8,
-    "descripcion": "Repuestos Mendez",
-    "imagen": "https://scontent.fros8-1.fna.fbcdn.net/v/t39.30808-6/468496061_122119145726559897_4790477508360285942_n.jpg?_nc_cat=104&amp;ccb=1-7&amp;_nc_sid=6ee11a&amp;_nc_ohc=ABa3ZCAymWMQ7kNvwGQC0ZP&amp;_nc_oc=Adm8owE6agqu9R4gev2D5Pes6_feEynzRin__gB-mHaA5Bf8YtmogAZGRbDg-MLSOSY&amp;_nc_zt=23&amp;_nc_ht=scontent.fros8-1.fna&amp;_nc_gid=9JPLTjZ0hOfaJeiWi7yB4g&amp;oh=00_AfJmj7mMChBKJaOJZb8g_9bNkRGq5N4f7ss9LIKAez51Iw&amp;oe=683E6282"
-  },
-  {
-    "nombre": "1 CAJA DE BUJIAS WEGA 10 UNIDADES DE W-T14 (C7HSA)",
-    "precio": 19681.38,
-    "descripcion": "Repuestos Mendez",
-    "imagen": "https://scontent.fros8-1.fna.fbcdn.net/v/t39.30808-6/468496061_122119145726559897_4790477508360285942_n.jpg?_nc_cat=104&amp;ccb=1-7&amp;_nc_sid=6ee11a&amp;_nc_ohc=ABa3ZCAymWMQ7kNvwGQC0ZP&amp;_nc_oc=Adm8owE6agqu9R4gev2D5Pes6_feEynzRin__gB-mHaA5Bf8YtmogAZGRbDg-MLSOSY&amp;_nc_zt=23&amp;_nc_ht=scontent.fros8-1.fna&amp;_nc_gid=9JPLTjZ0hOfaJeiWi7yB4g&amp;oh=00_AfJmj7mMChBKJaOJZb8g_9bNkRGq5N4f7ss9LIKAez51Iw&amp;oe=683E6282"
-  },
-  {
-    "nombre": "1 CAJA DE BUJIAS WEGA 10 UNIDADES DE W-ER12YC-9 (CPR8EA-9)",
-    "precio": 38849.32,
-    "descripcion": "Repuestos Mendez",
-    "imagen": "https://scontent.fros8-1.fna.fbcdn.net/v/t39.30808-6/468496061_122119145726559897_4790477508360285942_n.jpg?_nc_cat=104&amp;ccb=1-7&amp;_nc_sid=6ee11a&amp;_nc_ohc=ABa3ZCAymWMQ7kNvwGQC0ZP&amp;_nc_oc=Adm8owE6agqu9R4gev2D5Pes6_feEynzRin__gB-mHaA5Bf8YtmogAZGRbDg-MLSOSY&amp;_nc_zt=23&amp;_nc_ht=scontent.fros8-1.fna&amp;_nc_gid=9JPLTjZ0hOfaJeiWi7yB4g&amp;oh=00_AfJmj7mMChBKJaOJZb8g_9bNkRGq5N4f7ss9LIKAez51Iw&amp;oe=683E6282"
-  },
-  {
-    "nombre": "3 CAJAS DE BUJIAS FERRAZZI 12 UNIDADES DE MR7CC (NGK C7HSA)",
-    "precio": 22218.28,
-    "descripcion": "Repuestos Mendez",
-    "imagen": "https://scontent.fros8-1.fna.fbcdn.net/v/t39.30808-6/468496061_122119145726559897_4790477508360285942_n.jpg?_nc_cat=104&amp;ccb=1-7&amp;_nc_sid=6ee11a&amp;_nc_ohc=ABa3ZCAymWMQ7kNvwGQC0ZP&amp;_nc_oc=Adm8owE6agqu9R4gev2D5Pes6_feEynzRin__gB-mHaA5Bf8YtmogAZGRbDg-MLSOSY&amp;_nc_zt=23&amp;_nc_ht=scontent.fros8-1.fna&amp;_nc_gid=9JPLTjZ0hOfaJeiWi7yB4g&amp;oh=00_AfJmj7mMChBKJaOJZb8g_9bNkRGq5N4f7ss9LIKAez51Iw&amp;oe=683E6282"
-  },
-  {
-    "nombre": "3 CAJAS DE BUJIAS FERRAZZI 12 UNIDADES DE QR8CC (NGK D8EA)",
-    "precio": 22818.69,
-    "descripcion": "Repuestos Mendez",
-    "imagen": "https://scontent.fros8-1.fna.fbcdn.net/v/t39.30808-6/468496061_122119145726559897_4790477508360285942_n.jpg?_nc_cat=104&amp;ccb=1-7&amp;_nc_sid=6ee11a&amp;_nc_ohc=ABa3ZCAymWMQ7kNvwGQC0ZP&amp;_nc_oc=Adm8owE6agqu9R4gev2D5Pes6_feEynzRin__gB-mHaA5Bf8YtmogAZGRbDg-MLSOSY&amp;_nc_zt=23&amp;_nc_ht=scontent.fros8-1.fna&amp;_nc_gid=9JPLTjZ0hOfaJeiWi7yB4g&amp;oh=00_AfJmj7mMChBKJaOJZb8g_9bNkRGq5N4f7ss9LIKAez51Iw&amp;oe=683E6282"
-  },
-  {
-    "nombre": "3 CAJAS DE BUJIAS FERRAZZI 12 UNIDADES DE NR8CC (NGK CPR8EA-9)",
-    "precio": 26421.54,
-    "descripcion": "Repuestos Mendez",
-    "imagen": "https://scontent.fros8-1.fna.fbcdn.net/v/t39.30808-6/468496061_122119145726559897_4790477508360285942_n.jpg?_nc_cat=104&amp;ccb=1-7&amp;_nc_sid=6ee11a&amp;_nc_ohc=ABa3ZCAymWMQ7kNvwGQC0ZP&amp;_nc_oc=Adm8owE6agqu9R4gev2D5Pes6_feEynzRin__gB-mHaA5Bf8YtmogAZGRbDg-MLSOSY&amp;_nc_zt=23&amp;_nc_ht=scontent.fros8-1.fna&amp;_nc_gid=9JPLTjZ0hOfaJeiWi7yB4g&amp;oh=00_AfJmj7mMChBKJaOJZb8g_9bNkRGq5N4f7ss9LIKAez51Iw&amp;oe=683E6282"
-  },
-  {
-    "nombre": "3 CAJAS DE BUJIAS FERRAZZI 12 UNIDADES DE QR8IP IRIDIUM + PLATINO (NGK DR8EIX)",
-    "precio": 114645.63,
-    "descripcion": "Repuestos Mendez",
-    "imagen": "https://scontent.fros8-1.fna.fbcdn.net/v/t39.30808-6/468496061_122119145726559897_4790477508360285942_n.jpg?_nc_cat=104&amp;ccb=1-7&amp;_nc_sid=6ee11a&amp;_nc_ohc=ABa3ZCAymWMQ7kNvwGQC0ZP&amp;_nc_oc=Adm8owE6agqu9R4gev2D5Pes6_feEynzRin__gB-mHaA5Bf8YtmogAZGRbDg-MLSOSY&amp;_nc_zt=23&amp;_nc_ht=scontent.fros8-1.fna&amp;_nc_gid=9JPLTjZ0hOfaJeiWi7yB4g&amp;oh=00_AfJmj7mMChBKJaOJZb8g_9bNkRGq5N4f7ss9LIKAez51Iw&amp;oe=683E6282"
-  },
-  {
-    "nombre": "3 CAJAS DE BUJIAS FERRAZZI 12 UNIDADES DE MR7IP IRIDIUM + PLATINO (NGK CR7HIX)",
-    "precio": 114645.63,
-    "descripcion": "Repuestos Mendez",
-    "imagen": "https://scontent.fros8-1.fna.fbcdn.net/v/t39.30808-6/468496061_122119145726559897_4790477508360285942_n.jpg?_nc_cat=104&amp;ccb=1-7&amp;_nc_sid=6ee11a&amp;_nc_ohc=ABa3ZCAymWMQ7kNvwGQC0ZP&amp;_nc_oc=Adm8owE6agqu9R4gev2D5Pes6_feEynzRin__gB-mHaA5Bf8YtmogAZGRbDg-MLSOSY&amp;_nc_zt=23&amp;_nc_ht=scontent.fros8-1.fna&amp;_nc_gid=9JPLTjZ0hOfaJeiWi7yB4g&amp;oh=00_AfJmj7mMChBKJaOJZb8g_9bNkRGq5N4f7ss9LIKAez51Iw&amp;oe=683E6282"
-  },
-  {
-    "nombre": "3 CAJAS DE BUJIAS FERRAZZI 12 UNIDADES DE NR8IP IRIDIUM + PLATINO (NGK CPR8EAIX-9)",
-    "precio": 126713.21,
-    "descripcion": "Repuestos Mendez",
-    "imagen": "https://scontent.fros8-1.fna.fbcdn.net/v/t39.30808-6/468496061_122119145726559897_4790477508360285942_n.jpg?_nc_cat=104&amp;ccb=1-7&amp;_nc_sid=6ee11a&amp;_nc_ohc=ABa3ZCAymWMQ7kNvwGQC0ZP&amp;_nc_oc=Adm8owE6agqu9R4gev2D5Pes6_feEynzRin__gB-mHaA5Bf8YtmogAZGRbDg-MLSOSY&amp;_nc_zt=23&amp;_nc_ht=scontent.fros8-1.fna&amp;_nc_gid=9JPLTjZ0hOfaJeiWi7yB4g&amp;oh=00_AfJmj7mMChBKJaOJZb8g_9bNkRGq5N4f7ss9LIKAez51Iw&amp;oe=683E6282"
-  },
-  {
-    "nombre": "2.75-14 41L REINF TT HDMA005 + CAMARA SUPER HORSE",
-    "precio": 20441.14,
-    "descripcion": "Repuestos Mendez",
-    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/productos/999/22052025_999031280012-1_min.jpg?pfdrid_c=true"
+    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/productos/020/05062018_010010016-1_min.jpg?pfdrid_c=true"
   }
 ]
