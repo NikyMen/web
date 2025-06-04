@@ -1,0 +1,174 @@
+[
+  {
+    "nombre": "nicolas",
+    "telefono": "3795040807",
+    "productos": [
+      {
+        "codigo": "00100101000513489340",
+        "nombre": "100/80-17 M/C 52H TL SPORT DEMON FRONT",
+        "precio": 175361.42,
+        "descripcion": "Repuestos Mendez",
+        "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/productos/001/SportDemonD_min.jpg?pfdrid_c=true",
+        "cantidad": 1,
+        "subtotal": 175361.42
+      }
+    ],
+    "total": 175361.42,
+    "fecha": "2025-06-04T00:39:05.304Z"
+  },
+  {
+    "nombre": "nicolas",
+    "telefono": "3795040807",
+    "productos": [],
+    "total": 0,
+    "fecha": "2025-06-04T00:41:16.396Z"
+  },
+  {
+    "nombre": "nicolas",
+    "telefono": "+543795036085",
+    "productos": [],
+    "total": 0,
+    "fecha": "2025-06-04T00:41:35.598Z"
+  },
+  {
+    "nombre": "nicolas",
+    "telefono": "+543795036085",
+    "productos": [],
+    "total": 0,
+    "fecha": "2025-06-04T00:41:42.417Z"
+  },
+  {
+    "nombre": "nicolas",
+    "telefono": "+543795036085",
+    "productos": [],
+    "total": 0,
+    "fecha": "2025-06-04T00:43:22.099Z"
+  },
+  {
+    "nombre": "nicolas",
+    "telefono": "+543795040807",
+    "productos": [],
+    "total": 0,
+    "fecha": "2025-06-04T00:43:45.356Z"
+  },
+  {
+    "nombre": "nicolas",
+    "telefono": "3795040807",
+    "productos": [
+      {
+        "codigo": "00100101000214849448",
+        "nombre": "100/100-18 NHS MT 320",
+        "precio": 193042.82,
+        "descripcion": "Repuestos Mendez",
+        "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/productos/001/20102021_001001010002-1_min.jpg?pfdrid_c=true",
+        "cantidad": 1,
+        "subtotal": 193042.82
+      }
+    ],
+    "total": 193042.82,
+    "fecha": "2025-06-04T00:45:54.033Z"
+  },
+  {
+    "nombre": "nicolas",
+    "telefono": "3795040807",
+    "productos": [
+      {
+        "codigo": "00100101000214849448",
+        "nombre": "100/100-18 NHS MT 320",
+        "precio": 193042.82,
+        "descripcion": "Repuestos Mendez",
+        "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/productos/001/20102021_001001010002-1_min.jpg?pfdrid_c=true",
+        "cantidad": 2,
+        "subtotal": 386085.64
+      },
+      {
+        "codigo": "00100101000513489340",
+        "nombre": "100/80-17 M/C 52H TL SPORT DEMON FRONT",
+        "precio": 175361.42,
+        "descripcion": "Repuestos Mendez",
+        "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/productos/001/SportDemonD_min.jpg?pfdrid_c=true",
+        "cantidad": 1,
+        "subtotal": 175361.42
+      }
+    ],
+    "total": 561447.06,
+    "fecha": "2025-06-04T00:48:50.735Z"
+  },
+  {
+    "nombre": "eliana",
+    "telefono": "3795040807",
+    "productos": [
+      {
+        "codigo": "00100101001320409965",
+        "nombre": "100/90-19 57M NHS SCORPION MX HARD 486",
+        "precio": 265329.54,
+        "descripcion": "Repuestos Mendez",
+        "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/productos/001/06112017_mx-hard-486-rear_min.jpg?pfdrid_c=true",
+        "cantidad": 1,
+        "subtotal": 265329.54
+      }
+    ],
+    "total": 265329.54,
+    "fecha": "2025-06-04T01:00:00.095Z"
+  },
+  {
+    "nombre": "facu",
+    "telefono": "3795040807",
+    "productos": [
+      {
+        "codigo": "00100101006028586197",
+        "nombre": "120/70ZR17 M/C (58W) TL DIABLO ROSSO II FRONT (K)",
+        "precio": 371620.56,
+        "descripcion": "Repuestos Mendez",
+        "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/productos/001/04042023-001001010060-1_min.jpg?pfdrid_c=true",
+        "cantidad": 1,
+        "subtotal": 371620.56
+      },
+      {
+        "codigo": "00100101000214849448",
+        "nombre": "100/100-18 NHS MT 320",
+        "precio": 193042.82,
+        "descripcion": "Repuestos Mendez",
+        "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/productos/001/20102021_001001010002-1_min.jpg?pfdrid_c=true",
+        "cantidad": 1,
+        "subtotal": 193042.82
+      }
+    ],
+    "total": 564663.38,
+    "fecha": "2025-06-04T01:00:53.996Z"
+  },
+  {
+    "nombre": "avecedario",
+    "telefono": "3795040807",
+    "productos": [
+      {
+        "codigo": "00100101000513489340",
+        "nombre": "100/80-17 M/C 52H TL SPORT DEMON FRONT",
+        "precio": 175361.42,
+        "descripcion": "Repuestos Mendez",
+        "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/productos/001/SportDemonD_min.jpg?pfdrid_c=true",
+        "cantidad": 1,
+        "subtotal": 175361.42
+      }
+    ],
+    "total": 175361.42,
+    "fecha": "2025-06-04T01:10:11.488Z"
+  },
+  {
+    "nombre": "nicolas",
+    "telefono": "3795040807",
+    "productos": [
+      {
+        "codigo": "00100101000214849448",
+        "nombre": "100/100-18 NHS MT 320",
+        "precio": 193042.82,
+        "descripcion": "Repuestos Mendez",
+        "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/productos/001/20102021_001001010002-1_min.jpg?pfdrid_c=true",
+        "cantidad": 1,
+        "subtotal": 193042.82
+      }
+    ],
+    "total": 193042.82,
+    "fecha": "2025-06-04T01:12:39.864Z"
+  }
+]

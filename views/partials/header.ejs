@@ -33,8 +33,8 @@
       <a href="#" class="bg-yellow-400 text-blue-900 px-3 py-2 rounded font-semibold hover:bg-yellow-300 transition">
         🔥 Ofertas
       </a>
-      <a href="#" class="hover:underline font-medium">Categorías</a>
-      <a href="#" class="hover:underline font-medium">Vender</a>
+      <a href="/productos" class="hover:underline font-medium">Catalogo</a>
+      <a href="#" class="hover:underline font-medium">Nosotros</a>
       <a href="#" class="hover:underline font-medium">Ayuda</a>
 
       <% if (user && user.username) { %>
@@ -53,7 +53,10 @@
         </a>
       <% } %>
 
-      <a href="/carrito" class="text-2xl hover:text-gray-300">🛒</a>
+      <button id="abrirCarrito" class="text-white bg-blue-800 px-4 py-2 rounded hover:bg-blue-700">
+       🛒 Carrito
+      </button>
+
     </nav>
 
   </div>

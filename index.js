@@ -99,6 +99,34 @@ app.get("/productos", (req, res) => {
   })
 })
 
+app.get("/api/carrito", (req, res) => {
+  const productosTodos = JSON.parse(fs.readFileSync("./data/productos.json", "utf-8"))
+  const productosEnCarrito = Object.entries(carrito).map(([codigo, cantidad]) => {
+    const producto = productosTodos.find(p => p.codigo.trim() === codigo.trim())
+    if (!producto) return null
+    return {
+      nombre: producto.nombre,
+      codigo: producto.codigo,
+      precio: producto.precio,
+      cantidad,
+      subtotal: producto.precio * cantidad
+    }
+  }).filter(Boolean)
+
+  const total = productosEnCarrito.reduce((acc, p) => acc + p.subtotal, 0)
+
+  res.json({ productos: productosEnCarrito, total })
+})
+
+app.post("/api/carrito/eliminar", (req, res) => {
+  const { codigo } = req.body
+  if (carrito[codigo]) {
+    delete carrito[codigo]
+  }
+  res.json({ ok: true })
+})
+
+
 // 🆕 Ruta para detalle de producto
 app.get("/producto/:codigo", (req, res) => {
   const productos = JSON.parse(fs.readFileSync("./data/productos.json", "utf-8"))
@@ -189,6 +217,49 @@ app.post("/logout", (req, res) => {
   res.clearCookie("user")
   res.redirect("/")
 })
+
+// Ruta para finalizar compra y enviar a WhatsApp
+app.post("/carrito/finalizar", (req, res) => {
+  const nombre = req.body.nombre || "Usuario sin nombre"
+  const telefono = req.body.telefono || "Sin número"
+
+  const productosTodos = JSON.parse(fs.readFileSync("./data/productos.json", "utf-8"))
+  const productosEnCarrito = Object.entries(carrito).map(([codigo, cantidad]) => {
+    const producto = productosTodos.find(p => p.codigo.trim() === codigo.trim())
+    if (!producto) return null
+    return {
+      ...producto,
+      cantidad,
+      subtotal: producto.precio * cantidad
+    }
+  }).filter(Boolean)
+
+  const total = productosEnCarrito.reduce((acc, p) => acc + p.subtotal, 0)
+
+  let mensaje = `Hola! Soy ${nombre}. Quiero comprar estos productos:\n`;
+  productosEnCarrito.forEach(p => {
+    mensaje += `\n- ${p.nombre} (x${p.cantidad}) - $${p.subtotal.toLocaleString("es-AR", {minimumFractionDigits: 2})}`
+  })
+  mensaje += `\n\nTotal: $${total.toLocaleString("es-AR", {minimumFractionDigits: 2})}\nMi tel\u00e9fono es: ${telefono}`
+
+  const mensajeCodificado = encodeURIComponent(mensaje)
+  const numeroWhatsApp = "5493795036085" // <--- cambiar por tu número
+  const link = `https://wa.me/${numeroWhatsApp}?text=${mensajeCodificado}`
+
+  // Opcional: guardar en archivo .json si querés registro de pedidos
+  const historialPath = path.join(__dirname, "data", "historial-pedidos.json")
+  let historial = []
+  if (fs.existsSync(historialPath)) {
+    historial = JSON.parse(fs.readFileSync(historialPath, "utf-8"))
+  }
+  historial.push({ nombre, telefono, productos: productosEnCarrito, total, fecha: new Date().toISOString() })
+  fs.writeFileSync(historialPath, JSON.stringify(historial, null, 2))
+
+  // Limpia carrito y redirecciona
+  Object.keys(carrito).forEach(c => delete carrito[c])
+  res.redirect(link)
+})
+
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`)

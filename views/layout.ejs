@@ -15,6 +15,58 @@
   <main class="p-6">
     <%- body %>
   </main>
+  <!-- Carrito lateral -->
+  <div id="carritoSidebar" class="fixed top-0 right-0 w-96 max-w-full h-full bg-white shadow-lg transform translate-x-full transition-transform z-50 overflow-y-auto">
+    <div class="flex justify-between items-center px-4 py-3 border-b">
+      <h2 class="text-xl font-bold">🛒 Tu carrito</h2>
+      <button id="cerrarCarrito" class="text-gray-600 text-2xl font-bold">&times;</button>
+    </div>
+    <div id="carritoContenido" class="p-4 text-sm text-gray-700">
+    
+
+
+      
+
+    </div>
+  </div>
+
+  <script>
+  const carritoSidebar = document.getElementById("carritoSidebar");
+  const abrirCarrito = document.getElementById("abrirCarrito");
+  const cerrarCarrito = document.getElementById("cerrarCarrito");
+  const carritoContenido = document.getElementById("carritoContenido");
+
+  abrirCarrito.addEventListener("click", async () => {
+    carritoSidebar.classList.remove("translate-x-full");
+
+    // Cargar contenido
+    const res = await fetch("/api/carrito");
+    const data = await res.json();
+    if (data.productos.length === 0) {
+      carritoContenido.innerHTML = "<p class='text-center text-gray-500'>Tu carrito está vacío.</p>";
+    } else {
+      carritoContenido.innerHTML = `
+        <ul class="space-y-4">
+          ${data.productos.map(p => `
+            <li class="border-b pb-2">
+              <strong>${p.nombre}</strong><br>
+              Cantidad: ${p.cantidad}<br>
+              Subtotal: $${p.subtotal.toLocaleString("es-AR", {minimumFractionDigits: 2})}
+            </li>
+          `).join("")}
+        </ul>
+        <div class="mt-6 text-right font-bold">
+          Total: $${data.total.toLocaleString("es-AR", {minimumFractionDigits: 2})}
+        </div>
+        <a href="/carrito" class="block mt-4 text-center bg-blue-700 text-white py-2 rounded hover:bg-blue-800">Ir al carrito</a>
+      `
+    }
+  });
+
+  cerrarCarrito.addEventListener("click", () => {
+    carritoSidebar.classList.add("translate-x-full");
+  });
+</script>
 
 </body>
 </html>
