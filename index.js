@@ -126,6 +126,21 @@ app.post("/api/carrito/eliminar", (req, res) => {
   res.json({ ok: true })
 })
 
+app.get("/carrito/json", (req, res) => {
+  const productosTodos = JSON.parse(fs.readFileSync("./data/productos.json", "utf-8"))
+  const productosEnCarrito = Object.entries(carrito).map(([codigo, cantidad]) => {
+    const producto = productosTodos.find(p => p.codigo.trim() === codigo.trim())
+    if (!producto) return null
+    return {
+      ...producto,
+      cantidad,
+      subtotal: producto.precio * cantidad
+    }
+  }).filter(Boolean)
+
+  res.json(productosEnCarrito)
+})
+
 
 // 🆕 Ruta para detalle de producto
 app.get("/producto/:codigo", (req, res) => {

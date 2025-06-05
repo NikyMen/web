@@ -67,6 +67,64 @@
     carritoSidebar.classList.add("translate-x-full");
   });
 </script>
+<!-- 🛒 Panel lateral del carrito -->
+<div id="carritoPanel" class="fixed right-0 top-0 h-full w-80 bg-white shadow-lg z-50 p-4 transform translate-x-full transition-transform duration-300">
+  <h2 class="text-xl font-bold mb-4">🛒 Tu carrito</h2>
+  <div id="carritoContenido" class="space-y-4 text-sm text-gray-800">
+    <p>Cargando productos...</p>
+  </div>
+</div>
+
+<!-- 🔘 Botón flotante para abrir el carrito -->
+<button onclick="abrirCarrito()" class="fixed bottom-6 right-6 bg-blue-800 text-white p-4 rounded-full shadow-xl hover:bg-blue-700 z-50">
+  🛒
+</button>
+
+<script>
+  async function abrirCarrito() {
+    const panel = document.getElementById("carritoPanel")
+    panel.classList.remove("translate-x-full")
+
+    const res = await fetch("/carrito/json")
+    const productos = await res.json()
+    const contenedor = document.getElementById("carritoContenido")
+
+    if (productos.length === 0) {
+      contenedor.innerHTML = "<p class='text-gray-600'>Tu carrito está vacío.</p>"
+      return
+    }
+
+    let html = ""
+    let total = 0
+
+    productos.forEach(p => {
+      total += p.subtotal
+      html += `
+        <div class="border-b pb-2">
+          <h3 class="font-semibold">${p.nombre}</h3>
+          <p class="text-sm text-gray-500">Código: ${p.codigo}</p>
+          <p class="text-sm">Cantidad: ${p.cantidad}</p>
+          <p class="text-sm">Subtotal: $${p.subtotal.toLocaleString("es-AR", { minimumFractionDigits: 2 })}</p>
+          <button onclick="eliminarProducto('${p.codigo}')" class="mt-1 text-red-600 text-xs hover:underline">Eliminar</button>
+        </div>
+      `
+    })
+
+    html += `<p class="mt-4 font-bold text-right">Total: $${total.toLocaleString("es-AR", { minimumFractionDigits: 2 })}</p>`
+
+    contenedor.innerHTML = html
+  }
+
+  async function eliminarProducto(codigo) {
+    await fetch("/api/carrito/eliminar", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ codigo })
+    })
+    abrirCarrito()
+  }
+</script>
+
 
 </body>
 </html>

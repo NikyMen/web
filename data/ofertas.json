@@ -1,58 +1,44 @@
 [
 {
-    "codigo": "020010010009902642",
-    "nombre": "2380RR CDI RACING PARA MOTOS CHINAS HASTA 200CC ( ALIM. A MAGNETO) 1T. 5 PINES CUADRADOS",
-    "precio": 11734.35,
+    "codigo": "0001",
+    "nombre": "oferta1",
+    "precio": 17119.13,
     "descripcion": "Repuestos Mendez",
-    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/productos/020/05062018_010010009-1_min.jpg?pfdrid_c=true"
+    "imagen": "oferta1.png"
   },
   {
-    "codigo": "0200100100101027310",
-    "nombre": "2379R CDI RACING PARA MOTOS CHINAS HASTA 200CC (ALIM. A MAGNETO) 2T. 6 PINES CUADRADOS",
-    "precio": 13355.03,
+    "codigo": "0002",
+    "nombre": "9002 CABLE INSTALACION MOTO COMPETICION PARA CDI  A MAG. CONEXION TIPO 2010 UNIV ENDURO ON-OFF/ ON-ROAD",
+    "precio": 17119.13,
     "descripcion": "Repuestos Mendez",
-    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/productos/020/05062018_010010010-1_min.jpg?pfdrid_c=true"
+    "imagen": "oferta2.png"
   },
   {
-    "codigo": "0200100100111117225",
-    "nombre": "2379RR CDI RACING PARA MOTOS CHINAS HASTA 200CC (ALIM. A MAGNETO) 2T. 6 PINES CUADRADOS",
-    "precio": 14523.93,
+    "codigo": "0003",
+    "nombre": "9003 CABLE INSTALACION MOTO COMPETICION PARA CDI  A MAG. CONEXION TIPO 2010 UNIV ENDURO ON-OFF/ ON-ROAD",
+    "precio": 17119.13,
     "descripcion": "Repuestos Mendez",
-    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/productos/020/05062018_010010011-1_min.jpg?pfdrid_c=true"
+    "imagen": "oferta3.png"
   },
   {
-    "codigo": "020010010012974095",
-    "nombre": "2378R CDI RACING PARA MOTOS CHINAS HASTA 200CC (ALIM. A MAGNETO) 2T. 6 PINES REDONDOS",
-    "precio": 12663.24,
+    "codigo": "0004",
+    "nombre": "90044 CABLE INSTALACION MOTO COMPETICION PARA CDI  A MAG. CONEXION TIPO 2010 UNIV ENDURO ON-OFF/ ON-ROAD",
+    "precio": 17119.13,
     "descripcion": "Repuestos Mendez",
-    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/productos/020/05062018_010010012-1_min.jpg?pfdrid_c=true"
+    "imagen": "oferta4.png"
   },
   {
-    "codigo": "0200100100131072982",
-    "nombre": "2378RR CDI RACING PARA MOTOS CHINAS HASTA 200CC (ALIM. A MAGNETO) 2T. 6 PINES REDONDOS",
-    "precio": 13948.77,
+    "codigo": "0005",
+    "nombre": "9005 CABLE INSTALACION MOTO COMPETICION PARA CDI  A MAG. CONEXION TIPO 2010 UNIV ENDURO ON-OFF/ ON-ROAD",
+    "precio": 17119.13,
     "descripcion": "Repuestos Mendez",
-    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/productos/020/05062018_010010013-1_min.jpg?pfdrid_c=true"
+    "imagen": "oferta5.png"
   },
   {
-    "codigo": "020010010014793310",
-    "nombre": "2030 CDI ADLY 100/LEAD 80/SIAMBRETTA 50/ 6 PINES",
-    "precio": 10313.03,
+    "codigo": "0006",
+    "nombre": "9006 CABLE INSTALACION MOTO COMPETICION PARA CDI  A MAG. CONEXION TIPO 2010 UNIV ENDURO ON-OFF/ ON-ROAD",
+    "precio": 17119.13,
     "descripcion": "Repuestos Mendez",
-    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/productos/020/06092018_010010014-1_min.jpg?pfdrid_c=true"
-  },
-  {
-    "codigo": "020010010015913565",
-    "nombre": "2039 CDI ADLY 50/ZANELLA SPORT 100 SCOOTER",
-    "precio": 11876.34,
-    "descripcion": "Repuestos Mendez",
-    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/productos/020/06092018_010010015-1_min.jpg?pfdrid_c=true"
-  },
-  {
-    "codigo": "0200100100161028325",
-    "nombre": "2214 CDI AGRALE CAGIVA CUSTOM 125",
-    "precio": 13368.23,
-    "descripcion": "Repuestos Mendez",
-    "imagen": "https://imagenes-inp-aws.s3.amazonaws.com/imagenes/productos/020/05062018_010010016-1_min.jpg?pfdrid_c=true"
+    "imagen": "oferta6.png"
   }
 ]
