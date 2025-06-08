@@ -1,5 +1,47 @@
 [
   {
+    "codigo": "0001",
+    "nombre": "Juego de cubiertas KTM DUKE",
+    "precio": 169000.00,
+    "descripcion": "Repuestos Mendez",
+    "imagen": "duke.png"
+  },
+  {
+    "codigo": "0002",
+    "nombre": "Juego de cubiertas HONDA XR 250",
+    "precio": 113000.00,
+    "descripcion": "Repuestos Mendez",
+    "imagen": "xr250.png"
+  },
+  {
+    "codigo": "0003",
+    "nombre": "Juego de cubiertas YAMAHA FZ 150",
+    "precio": 154000.00,
+    "descripcion": "Repuestos Mendez",
+    "imagen": "fz.png"
+  },
+  {
+    "codigo": "0004",
+    "nombre": "Juego de cubiertas YBR / CG 150",
+    "precio": 72000.00,
+    "descripcion": "Repuestos Mendez",
+    "imagen": "ybr/cg.png"
+  },
+  {
+    "codigo": "0005",
+    "nombre": "Juego de cubiertas HONDA WAVE 110",
+    "precio": 120000.00,
+    "descripcion": "Repuestos Mendez",
+    "imagen": "wave.png"
+  },
+  {
+    "codigo": "0006",
+    "nombre": "Juego de cubiertas 110",
+    "precio": 52000.00,
+    "descripcion": "Repuestos Mendez",
+    "imagen": "110.png"
+  },
+  {
     "codigo": "00100101000114852175",
     "nombre": "100/100-18 59M NHS SCORPION MX EXTRA",
     "precio": 193078.27,
