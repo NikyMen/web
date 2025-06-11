@@ -22,7 +22,7 @@
         const rutaImagen = esLocal ? `/img/${p.imagen}` : p.imagen
       %>
         <div class="w-64 flex-shrink-0 bg-white shadow-md rounded-lg p-4">
-          <img src="/img/<%= p.imagen %>" alt="<%= p.nombre %>" class="w-full h-64 object-cover rounded-md mb-3" />
+          <img src="<%= p.imagen %>" alt="<%= p.nombre %>" class="w-full h-64 object-cover rounded-md mb-3" />
           <h3 class="text-lg font-semibold text-blue-900 mb-1"><%= p.nombre %></h3>
           <p class="text-sm text-gray-600 mb-2"><%= p.descripcion %></p>
           <p class="text-green-600 font-bold text-lg mb-3">$<%= p.precio.toLocaleString("es-AR") %></p>

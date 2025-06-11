@@ -126,6 +126,21 @@ app.post("/api/carrito/eliminar", (req, res) => {
   res.json({ ok: true })
 })
 
+// RUTA GET - Muestra la página "Nosotros"
+app.get("/nosotros", (req, res) => {
+  res.render("nosotros", {
+    user: res.locals.user
+  })
+})
+
+// RUTA POST - (Opcional) Si querés recibir algún formulario de contacto o suscripción en el futuro
+app.post("/nosotros", (req, res) => {
+  const { nombre, mensaje } = req.body
+  console.log(`Mensaje recibido de ${nombre}: ${mensaje}`)
+  res.redirect("/nosotros")
+})
+
+
 app.get("/carrito/json", (req, res) => {
   const productosTodos = JSON.parse(fs.readFileSync("./data/productos.json", "utf-8"))
   const productosEnCarrito = Object.entries(carrito).map(([codigo, cantidad]) => {
