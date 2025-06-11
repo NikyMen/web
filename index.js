@@ -140,6 +140,12 @@ app.post("/nosotros", (req, res) => {
   res.redirect("/nosotros")
 })
 
+app.get("/ayuda", (req, res) => {
+  res.render("ayuda", {
+    user: res.locals.user
+  })
+})
+
 
 app.get("/carrito/json", (req, res) => {
   const productosTodos = JSON.parse(fs.readFileSync("./data/productos.json", "utf-8"))
