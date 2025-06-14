@@ -16,118 +16,72 @@
   <main class="p-6">
     <%- body %>
   </main>
-  <!-- Carrito lateral -->
-  <div id="carritoSidebar" class="fixed top-0 right-0 w-96 max-w-full h-full bg-white shadow-lg transform translate-x-full transition-transform z-50 overflow-y-auto">
-    <div class="flex justify-between items-center px-4 py-3 border-b">
+
+  <!-- 🛒 Panel lateral único -->
+  <div id="carritoPanel" class="fixed right-0 top-0 h-full w-80 bg-white shadow-lg z-50 p-4 transform translate-x-full transition-transform duration-300 overflow-y-auto">
+    <div class="flex justify-between items-center mb-4 border-b pb-2">
       <h2 class="text-xl font-bold">🛒 Tu carrito</h2>
-      <button id="cerrarCarrito" class="text-gray-600 text-2xl font-bold">&times;</button>
+      <button onclick="cerrarCarrito()" class="text-gray-600 text-2xl font-bold">&times;</button>
     </div>
-    <div id="carritoContenido" class="p-4 text-sm text-gray-700">
-    
-
-
-      
-
+    <div id="carritoContenido" class="space-y-4 text-sm text-gray-800">
+      <p>Cargando productos...</p>
     </div>
+    <a href="/carrito" class="block mt-4 text-center bg-blue-700 text-white py-2 rounded hover:bg-blue-800">Ir al carrito</a>
   </div>
+
+  <!-- 🔘 Botón flotante para abrir el carrito -->
+  <button onclick="abrirCarrito()" class="fixed bottom-6 right-6 bg-blue-800 text-white p-4 rounded-full shadow-xl hover:bg-blue-700 z-50">
+    🛒
+  </button>
 
   <script>
-  const carritoSidebar = document.getElementById("carritoSidebar");
-  const abrirCarrito = document.getElementById("abrirCarrito");
-  const cerrarCarrito = document.getElementById("cerrarCarrito");
-  const carritoContenido = document.getElementById("carritoContenido");
+    async function abrirCarrito() {
+      const panel = document.getElementById("carritoPanel")
+      panel.classList.remove("translate-x-full")
 
-  abrirCarrito.addEventListener("click", async () => {
-    carritoSidebar.classList.remove("translate-x-full");
+      const res = await fetch("/carrito/json")
+      const productos = await res.json()
+      const contenedor = document.getElementById("carritoContenido")
 
-    // Cargar contenido
-    const res = await fetch("/api/carrito");
-    const data = await res.json();
-    if (data.productos.length === 0) {
-      carritoContenido.innerHTML = "<p class='text-center text-gray-500'>Tu carrito está vacío.</p>";
-    } else {
-      carritoContenido.innerHTML = `
-        <ul class="space-y-4">
-          ${data.productos.map(p => `
-            <li class="border-b pb-2">
-              <strong>${p.nombre}</strong><br>
-              Cantidad: ${p.cantidad}<br>
-              Subtotal: $${p.subtotal.toLocaleString("es-AR", {minimumFractionDigits: 2})}
-            </li>
-          `).join("")}
-        </ul>
-        <div class="mt-6 text-right font-bold">
-          Total: $${data.total.toLocaleString("es-AR", {minimumFractionDigits: 2})}
-        </div>
-        <a href="/carrito" class="block mt-4 text-center bg-blue-700 text-white py-2 rounded hover:bg-blue-800">Ir al carrito</a>
-      `
-    }
-  });
+      if (productos.length === 0) {
+        contenedor.innerHTML = "<p class='text-gray-600'>Tu carrito está vacío.</p>"
+        return
+      }
 
-  cerrarCarrito.addEventListener("click", () => {
-    carritoSidebar.classList.add("translate-x-full");
-  });
-</script>
-<!-- 🛒 Panel lateral del carrito -->
-<div id="carritoPanel" class="fixed right-0 top-0 h-full w-80 bg-white shadow-lg z-50 p-4 transform translate-x-full transition-transform duration-300">
-  <h2 class="text-xl font-bold mb-4">🛒 Tu carrito</h2>
-  <div id="carritoContenido" class="space-y-4 text-sm text-gray-800">
-    <p>Cargando productos...</p>
-  </div>
-</div>
+      let html = ""
+      let total = 0
 
-<!-- 🔘 Botón flotante para abrir el carrito -->
-<button onclick="window.location.href='/carrito'" class="fixed bottom-6 right-6 bg-blue-800 text-white p-4 rounded-full shadow-xl hover:bg-blue-700 z-50">
-  🛒
-</button>
+      productos.forEach(p => {
+        total += p.subtotal
+        html += `
+          <div class="border-b pb-2">
+            <h3 class="font-semibold">${p.nombre}</h3>
+            <p class="text-sm text-gray-500">Código: ${p.codigo}</p>
+            <p class="text-sm">Cantidad: ${p.cantidad}</p>
+            <p class="text-sm">Subtotal: $${p.subtotal.toLocaleString("es-AR", { minimumFractionDigits: 2 })}</p>
+            <button onclick="eliminarProducto('${p.codigo}')" class="mt-1 text-red-600 text-xs hover:underline">Eliminar</button>
+          </div>
+        `
+      })
 
-
-
-<script>
-  async function abrirCarrito() {
-    const panel = document.getElementById("carritoPanel")
-    panel.classList.remove("translate-x-full")
-
-    const res = await fetch("/carrito/json")
-    const productos = await res.json()
-    const contenedor = document.getElementById("carritoContenido")
-
-    if (productos.length === 0) {
-      contenedor.innerHTML = "<p class='text-gray-600'>Tu carrito está vacío.</p>"
-      return
+      html += `<p class="mt-4 font-bold text-right">Total: $${total.toLocaleString("es-AR", { minimumFractionDigits: 2 })}</p>`
+      contenedor.innerHTML = html
     }
 
-    let html = ""
-    let total = 0
+    function cerrarCarrito() {
+      document.getElementById("carritoPanel").classList.add("translate-x-full")
+    }
 
-    productos.forEach(p => {
-      total += p.subtotal
-      html += `
-        <div class="border-b pb-2">
-          <h3 class="font-semibold">${p.nombre}</h3>
-          <p class="text-sm text-gray-500">Código: ${p.codigo}</p>
-          <p class="text-sm">Cantidad: ${p.cantidad}</p>
-          <p class="text-sm">Subtotal: $${p.subtotal.toLocaleString("es-AR", { minimumFractionDigits: 2 })}</p>
-          <button onclick="eliminarProducto('${p.codigo}')" class="mt-1 text-red-600 text-xs hover:underline">Eliminar</button>
-        </div>
-      `
-    })
-
-    html += `<p class="mt-4 font-bold text-right">Total: $${total.toLocaleString("es-AR", { minimumFractionDigits: 2 })}</p>`
-
-    contenedor.innerHTML = html
-  }
-
-  async function eliminarProducto(codigo) {
-    await fetch("/api/carrito/eliminar", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ codigo })
-    })
-    abrirCarrito()
-  }
-</script>
-
+    async function eliminarProducto(codigo) {
+      await fetch("/api/carrito/eliminar", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ codigo })
+      })
+      abrirCarrito()
+    }
+  </script>
 
 </body>
+
 </html>
