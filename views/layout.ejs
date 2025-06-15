@@ -80,6 +80,18 @@
       })
       abrirCarrito()
     }
+    
+    function mostrarNotificacion() {
+    const noti = document.getElementById("notificacionCarrito")
+    noti.classList.remove("opacity-0")
+    noti.classList.add("opacity-100")
+
+    setTimeout(() => {
+    noti.classList.remove("opacity-100")
+    noti.classList.add("opacity-0")
+  }, 2500)
+}
+
   </script>
 
 </body>
