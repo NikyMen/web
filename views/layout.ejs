@@ -81,17 +81,28 @@
       abrirCarrito()
     }
     
-    function mostrarNotificacion() {
+    async function agregarAlCarrito(codigo) {
+    const cantidad = parseInt(document.getElementById("cantidadProducto").value) || 1
+
+    await fetch("/carrito/agregar", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ codigo, cantidad })
+    })
+
+    mostrarNotificacion()
+  }
+
+  function mostrarNotificacion() {
     const noti = document.getElementById("notificacionCarrito")
     noti.classList.remove("opacity-0")
     noti.classList.add("opacity-100")
 
     setTimeout(() => {
-    noti.classList.remove("opacity-100")
-    noti.classList.add("opacity-0")
-  }, 2500)
-}
-
+      noti.classList.remove("opacity-100")
+      noti.classList.add("opacity-0")
+    }, 2000)
+  }
   </script>
 
 </body>
