@@ -4,122 +4,79 @@
   <meta charset="UTF-8" />
   <title>Inicio</title>
   <link rel="icon" href="/favicon.png" type="image/png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
+<body class="bg-gray-100 text-gray-800 font-sans">
 
-<div class="bg-yellow-400 text-blue-900 px-6 py-3 text-center font-semibold rounded mb-6">
-  🚚 Envío gratis en compras mayores a $80.000 en Corrientes
-</div>
+  <!-- Banner superior -->
+  <div class="bg-yellow-400 text-blue-900 px-6 py-3 text-center font-semibold rounded-b mb-6">
+    🚚 Envío gratis en compras mayores a $80.000 en Corrientes
+  </div>
 
-<section class="py-10 px-6">
-  <h2 class="text-2xl font-bold text-blue-900 mb-6 text-center flex justify-center items-center gap-2">
-    🔥 Ofertas destacadas
-  </h2>
+  <!-- Ofertas con imagen de fondo -->
+  <section class="relative w-full overflow-hidden py-16 px-6">
+    <img src="https://images4.alphacoders.com/725/725730.jpg" alt="Fondo"
+         class="absolute inset-0 w-full h-full object-cover opacity-100 pointer-events-none z-0" />
 
-  <div class="overflow-x-auto scrollbar-hide">
-    <div class="flex gap-4 w-max">
-      <% productos.forEach((p) => { 
-        const esLocal = !p.imagen.startsWith("http")
-        const rutaImagen = esLocal ? `/img/${p.imagen}` : p.imagen
-      %>
-        <div class="w-64 flex-shrink-0 bg-white shadow-md rounded-lg p-4">
-          <img src="<%= p.imagen %>" alt="<%= p.nombre %>" class="w-full h-64 object-cover rounded-md mb-3" />
-          <h3 class="text-lg font-semibold text-blue-900 mb-1"><%= p.nombre %></h3>
-          <p class="text-sm text-gray-600 mb-2"><%= p.descripcion %></p>
-          <p class="text-green-600 font-bold text-lg mb-3">$<%= p.precio.toLocaleString("es-AR") %></p>
-          <a href="/producto/<%= p.codigo %>" class="block text-center bg-blue-800 text-white py-2 rounded hover:bg-blue-700 transition">Ver más detalles</a>
-        </div>
-      <% }) %>
+    <div class="relative z-10 max-w-screen-xl mx-auto">
+      <h2 class="text-3xl font-bold text-blue-900 mb-8 text-center">🔥 Ofertas destacadas</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+        <% productos.forEach(p => { %>
+          <div class="bg-white bg-opacity-75 p-4 rounded shadow">
+            <img src="<%= p.imagen %>" class="w-full h-40 object-contain mb-2" />
+            <h3 class="font-semibold text-gray-900"><%= p.nombre %></h3>
+            <p class="text-green-600 font-bold text-lg mb-2">$<%= p.precio.toLocaleString("es-AR") %></p>
+            <a href="/producto/<%= p.codigo %>" class="block text-center bg-blue-800 text-white py-2 rounded hover:bg-blue-700 transition">Ver más</a>
+          </div>
+        <% }) %>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
+  <!-- Categorías -->
+  <section class="py-16 px-6">
+    <h2 class="text-3xl font-bold text-center text-blue-900 mb-10">🔧 Categorías Populares</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-screen-xl mx-auto">
+      <a href="/productos?buscar=cubierta" class="bg-white p-6 rounded shadow hover:shadow-xl transition text-center">
+        <img src="/img/1.png" alt="Cubierta" class="h-36 mx-auto mb-4 object-contain">
+        <span class="text-lg font-semibold text-gray-800">Cubiertas</span>
+      </a>
+      <a href="/productos?buscar=bateria" class="bg-white p-6 rounded shadow hover:shadow-xl transition text-center">
+        <img src="/img/2.png" alt="Batería" class="h-36 mx-auto mb-4 object-contain">
+        <span class="text-lg font-semibold text-gray-800">Baterías</span>
+      </a>
+      <a href="/productos?buscar=luz" class="bg-white p-6 rounded shadow hover:shadow-xl transition text-center">
+        <img src="/img/3.png" alt="Luz" class="h-36 mx-auto mb-4 object-contain">
+        <span class="text-lg font-semibold text-gray-800">Luces</span>
+      </a>
+      <a href="/productos?buscar=filtro" class="bg-white p-6 rounded shadow hover:shadow-xl transition text-center">
+        <img src="/img/4.png" alt="Filtro" class="h-36 mx-auto mb-4 object-contain">
+        <span class="text-lg font-semibold text-gray-800">Filtros</span>
+      </a>
+      <a href="/productos?buscar=transmision" class="bg-white p-6 rounded shadow hover:shadow-xl transition text-center">
+        <img src="/img/5.png" alt="Transmisión" class="h-36 mx-auto mb-4 object-contain">
+        <span class="text-lg font-semibold text-gray-800">Transmisión</span>
+      </a>
+      <a href="/productos?buscar=aceite" class="bg-white p-6 rounded shadow hover:shadow-xl transition text-center">
+        <img src="/img/6.png" alt="Aceite" class="h-36 mx-auto mb-4 object-contain">
+        <span class="text-lg font-semibold text-gray-800">Aceites</span>
+      </a>
+    </div>
+  </section>
 
-<script>
-  const carrusel = document.getElementById("carruselInner")
-  let autoScroll = true
-  let currentPosition = 0
-
-  const moverCarrusel = () => {
-    if (!autoScroll) return
-
-    const cardWidth = carrusel.firstElementChild.offsetWidth + 16
-    const totalWidth = carrusel.scrollWidth
-    currentPosition += cardWidth
-
-    if (currentPosition >= totalWidth - carrusel.offsetWidth) {
-      currentPosition = 0
-      carrusel.style.transition = "none"
-    } else {
-      carrusel.style.transition = "transform 0.7s ease-in-out"
-    }
-
-    carrusel.style.transform = `translateX(-${currentPosition}px)`
-  }
-
-  let intervalo = setInterval(moverCarrusel, 3000)
-
-  // Si el usuario hace scroll manual, pausamos y reiniciamos
-  let scrollTimeout
-  const contenedor = document.querySelector("#carrusel")
-
-  contenedor.addEventListener("scroll", () => {
-    autoScroll = false
-    clearInterval(intervalo)
-    clearTimeout(scrollTimeout)
-
-    scrollTimeout = setTimeout(() => {
-      currentPosition = contenedor.scrollLeft
-      autoScroll = true
-      intervalo = setInterval(moverCarrusel, 3000)
-    }, 3000)
-  })
-</script>
-
-<section class="py-16 px-6 bg-gray-50">
-  <h2 class="text-3xl font-bold text-center text-blue-900 mb-10">🔧 Categorías Populares</h2>
-
-  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-screen-xl mx-auto">
-    <a href="/productos?buscar=cubierta" class="bg-white p-6 rounded shadow hover:shadow-xl transition text-center">
-      <img src="/img/1.png" alt="Cubierta" class="h-36 mx-auto mb-4 object-contain">
-      <span class="text-lg font-semibold text-gray-800">Cubiertas</span>
-    </a>
-    <a href="/productos?buscar=bateria" class="bg-white p-6 rounded shadow hover:shadow-xl transition text-center">
-      <img src="/img/2.png" alt="Batería" class="h-36 mx-auto mb-4 object-contain">
-      <span class="text-lg font-semibold text-gray-800">Baterías</span>
-    </a>
-    <a href="/productos?buscar=luz" class="bg-white p-6 rounded shadow hover:shadow-xl transition text-center">
-      <img src="/img/3.png" alt="Luz" class="h-36 mx-auto mb-4 object-contain">
-      <span class="text-lg font-semibold text-gray-800">Luces</span>
-    </a>
-    <a href="/productos?buscar=filtro" class="bg-white p-6 rounded shadow hover:shadow-xl transition text-center">
-      <img src="/img/4.png" alt="Filtro" class="h-36 mx-auto mb-4 object-contain">
-      <span class="text-lg font-semibold text-gray-800">Filtros</span>
-    </a>
-    <a href="/productos?buscar=transmision" class="bg-white p-6 rounded shadow hover:shadow-xl transition text-center">
-      <img src="/img/5.png" alt="Transmisión" class="h-36 mx-auto mb-4 object-contain">
-      <span class="text-lg font-semibold text-gray-800">Transmisión</span>
-    </a>
-    <a href="/productos?buscar=aceite" class="bg-white p-6 rounded shadow hover:shadow-xl transition text-center">
-      <img src="/img/6.png" alt="Aceite" class="h-36 mx-auto mb-4 object-contain">
-      <span class="text-lg font-semibold text-gray-800">Aceites</span>
-    </a>
-  </div>
-</section>
-
-<section class="py-12 px-6 bg-white border-t mt-12">
-  <h2 class="text-2xl font-bold text-center text-blue-900 mb-8">🚀 Trabajamos con las mejores marcas</h2>
-  
-  <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center justify-items-center max-w-screen-xl mx-auto">
-    <img src="/img/marcas/pirelli.png" alt="Pirelli" class="h-16 object-contain" />
-    <img src="/img/marcas/yuasa.png" alt="Yuasa" class="h-16 object-contain" />
-    <img src="/img/marcas/ngk.png" alt="NGK" class="h-16 object-contain" />
-    <img src="/img/marcas/motul.png" alt="Motul" class="h-16 object-contain" />
-    <img src="/img/marcas/castrol.png" alt="Castrol" class="h-16 object-contain" />
-    <img src="/img/marcas/bosch.png" alt="Bosch" class="h-16 object-contain" />
-  </div>
-</section>
-
+  <!-- Marcas -->
+  <section class="py-12 px-6 bg-white border-t mt-12">
+    <h2 class="text-2xl font-bold text-center text-blue-900 mb-8">🚀 Trabajamos con las mejores marcas</h2>
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center justify-items-center max-w-screen-xl mx-auto">
+      <img src="/img/marcas/pirelli.png" alt="Pirelli" class="h-16 object-contain" />
+      <img src="/img/marcas/yuasa.png" alt="Yuasa" class="h-16 object-contain" />
+      <img src="/img/marcas/ngk.png" alt="NGK" class="h-16 object-contain" />
+      <img src="/img/marcas/motul.png" alt="Motul" class="h-16 object-contain" />
+      <img src="/img/marcas/castrol.png" alt="Castrol" class="h-16 object-contain" />
+      <img src="/img/marcas/bosch.png" alt="Bosch" class="h-16 object-contain" />
+    </div>
+  </section>
 
 </body>
 </html>
