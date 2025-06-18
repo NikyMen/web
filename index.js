@@ -50,10 +50,6 @@ app.get("/", (req, res) => {
   })
 })
 
-app.get("/protected", (req, res) => {
-  if (!res.locals.user) return res.redirect("/")
-  res.render("protected", { user: res.locals.user })
-})
 
 app.get("/register", (req, res) => {
   res.render("register")
