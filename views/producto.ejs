@@ -8,16 +8,17 @@
 
     <form action="/carrito/agregar" method="POST" class="mt-6">
      <input type="hidden" name="codigo" value="<%= producto.codigo %>">
-     <label class="block mb-2 text-sm font-medium text-gray-700">Cantidad:</label>
-    <input
+      <label class="block mb-2 text-sm font-medium text-gray-700">Cantidad:</label>
+  <input
+    id="cantidadProducto"
     type="number"
-    name="cantidad"
     value="1"
     min="1"
     class="w-24 px-3 py-2 border rounded mb-4"
-    >
-    <button
+  />
+  <button
     onclick="agregarAlCarrito('<%= producto.codigo %>')"
+    type="button"
     class="bg-blue-800 text-white px-6 py-3 rounded hover:bg-blue-700 transition"
   >
     🛒 Agregar al carrito

@@ -12,9 +12,15 @@
   <!-- ✅ Encabezado reutilizable -->
   <%- include('partials/header') %>
 
+<!-- ✅ Notificación horizontal debajo del header -->
+<div id="notificacionCarrito" class="fixed top-[4.5rem] left-4 right-4 max-w-screen-xl mx-auto bg-green-600 text-white px-6 py-3 rounded shadow-lg z-50 hidden opacity-0 transition-opacity duration-300 text-center text-sm sm:text-base">
+ Producto agregado al carrito ✅
+</div>
+
   <!-- ✅ Cuerpo dinámico -->
   <main class="p-6">
     <%- body %>
+    
   </main>
 
   <!-- 🛒 Panel lateral único -->
@@ -44,12 +50,16 @@
   class="fixed bottom-6 right-6 bg-white p-3 rounded-full shadow-lg z-50 hover:shadow-xl transition"
   aria-label="Carrito">
   <img src="https://cdn-icons-png.flaticon.com/512/3144/3144456.png" alt="Carrito" class="w-7 h-7">
+  <span id="contadorCarrito" class="absolute -top-2 -right-2 bg-red-600 text-white text-xs font-bold w-5 h-5 flex items-center justify-center rounded-full">0</span>
 </button>
 
 
 <script>
   const panel = document.getElementById("carritoPanel");
   const botonCarrito = document.getElementById("botonCarrito");
+  const contenedor = document.getElementById("carritoContenido");
+
+  botonCarrito.addEventListener("click", abrirCarrito);
 
   async function abrirCarrito() {
     const estaAbierto = !panel.classList.contains("translate-x-full");
@@ -60,10 +70,8 @@
 
     panel.classList.remove("translate-x-full"); // Abre si está cerrado
 
-    // Cargar productos
     const res = await fetch("/carrito/json");
     const productos = await res.json();
-    const contenedor = document.getElementById("carritoContenido");
 
     if (productos.length === 0) {
       contenedor.innerHTML = "<p class='text-gray-600'>Tu carrito está vacío.</p>";
@@ -96,8 +104,62 @@
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ codigo })
     });
-    abrirCarrito();
+    abrirCarrito(); // Refresca el panel
+    mostrarNotificacion("Producto eliminado ❌");
+    actualizarContadorCarrito();
   }
+
+  async function actualizarContadorCarrito() {
+    const res = await fetch("/carrito/json");
+    const productos = await res.json();
+    const total = productos.reduce((acc, p) => acc + p.cantidad, 0);
+    const contador = document.getElementById("contadorCarrito");
+    if (contador) {
+      contador.textContent = total;
+      contador.classList.remove("hidden");
+    }
+  }
+
+ function mostrarNotificacion(mensaje = "Producto agregado al carrito ✅") {
+  const noti = document.getElementById("notificacionCarrito");
+  if (!noti) return;
+  noti.textContent = mensaje;
+  noti.classList.remove("hidden");
+  noti.classList.add("opacity-100");
+
+  setTimeout(() => {
+    noti.classList.remove("opacity-100");
+    setTimeout(() => noti.classList.add("hidden"), 300); // espera que se desvanezca
+  }, 2000);
+}
+
+async function agregarAlCarrito(codigo) {
+    const cantidad = document.getElementById("cantidadProducto").value || 1
+
+    await fetch("/carrito/agregar", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ codigo, cantidad })
+    })
+
+    mostrarNotificacion("✅ Producto agregado al carrito")
+    actualizarContadorCarrito()
+  }
+
+  function mostrarNotificacion(mensaje) {
+    const notif = document.getElementById("notificacionCarrito")
+    notif.textContent = mensaje
+    notif.classList.remove("hidden", "opacity-0")
+    notif.classList.add("opacity-100")
+
+    setTimeout(() => {
+      notif.classList.add("opacity-0")
+      setTimeout(() => notif.classList.add("hidden"), 300)
+    }, 2500)
+  }
+  
 </script>
 
 </body>
