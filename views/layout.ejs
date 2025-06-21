@@ -61,6 +61,10 @@
 
   botonCarrito.addEventListener("click", abrirCarrito);
 
+  
+  document.addEventListener("DOMContentLoaded", actualizarContadorCarrito);
+
+  
   async function abrirCarrito() {
     const estaAbierto = !panel.classList.contains("translate-x-full");
     if (estaAbierto) {
@@ -134,19 +138,30 @@
 }
 
 async function agregarAlCarrito(codigo) {
-    const cantidad = document.getElementById("cantidadProducto").value || 1
+  const cantidad = parseInt(document.querySelector('input[name="cantidad"]').value) || 1;
 
-    await fetch("/carrito/agregar", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({ codigo, cantidad })
-    })
+  // Guardar en localStorage
+  const carrito = JSON.parse(localStorage.getItem("carrito")) || {};
+  carrito[codigo] = (carrito[codigo] || 0) + cantidad;
+  localStorage.setItem("carrito", JSON.stringify(carrito));
 
-    mostrarNotificacion("✅ Producto agregado al carrito")
-    actualizarContadorCarrito()
-  }
+  // Llamar al backend para agregar en sesión
+  await fetch("/carrito/agregar", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ codigo, cantidad })
+  });
+
+  // Mostrar notificación
+  mostrarNotificacion();
+  actualizarContadorCarrito();
+}
+
+function actualizarContadorCarrito() {
+  const carrito = JSON.parse(localStorage.getItem("carrito")) || {};
+  const total = Object.values(carrito).reduce((acc, cantidad) => acc + cantidad, 0);
+  document.getElementById("contadorCarrito").textContent = total;
+}
 
   function mostrarNotificacion(mensaje) {
     const notif = document.getElementById("notificacionCarrito")

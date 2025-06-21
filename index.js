@@ -190,7 +190,7 @@ app.post("/carrito/agregar", (req, res) => {
     carrito[codigo] += cantidad
   }
 
-  res.redirect("/carrito")
+  res.json({ ok: true }) // ✅ No redirige más, simplemente responde
 })
 
 // 3. Ruta para ver el carrito
