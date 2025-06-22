@@ -170,5 +170,22 @@
     ],
     "total": 193042.82,
     "fecha": "2025-06-04T01:12:39.864Z"
+  },
+  {
+    "nombre": "nicolas",
+    "telefono": "3795040807",
+    "productos": [
+      {
+        "codigo": "0010010100004",
+        "nombre": "Juego de cubiertas PIRELLI YBR / CG 150",
+        "precio": 72000,
+        "descripcion": "Repuestos Mendez",
+        "imagen": "https://i.imgur.com/bscib7V.jpeg",
+        "cantidad": 1,
+        "subtotal": 72000
+      }
+    ],
+    "total": 72000,
+    "fecha": "2025-06-22T23:22:39.832Z"
   }
 ]

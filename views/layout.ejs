@@ -3,27 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <title><%= typeof title !== 'undefined' ? title : 'Repuestos Méndez' %></title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="/favicon.png" type="image/png">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body class="bg-gray-100 text-gray-800 font-sans">
 
-  <!-- ✅ Encabezado reutilizable -->
   <%- include('partials/header') %>
 
-<!-- ✅ Notificación horizontal debajo del header -->
-<div id="notificacionCarrito" class="fixed top-[4.5rem] left-4 right-4 max-w-screen-xl mx-auto bg-green-600 text-white px-6 py-3 rounded shadow-lg z-50 hidden opacity-0 transition-opacity duration-300 text-center text-sm sm:text-base">
- Producto agregado al carrito ✅
-</div>
+  <!-- ✅ Notificación flotante -->
+  <div id="notificacionCarrito" class="fixed top-[4.5rem] left-4 right-4 max-w-screen-xl mx-auto bg-green-600 text-white px-6 py-3 rounded shadow-lg z-50 hidden opacity-0 transition-opacity duration-300 text-center text-sm sm:text-base">
+    Producto agregado al carrito ✅
+  </div>
 
   <!-- ✅ Cuerpo dinámico -->
   <main class="p-6">
     <%- body %>
-    
   </main>
 
-  <!-- 🛒 Panel lateral único -->
+  <!-- ✅ Panel lateral del carrito -->
   <div id="carritoPanel" class="fixed right-0 top-0 h-full w-80 bg-white shadow-lg z-50 p-4 transform translate-x-full transition-transform duration-300 overflow-y-auto">
     <div class="flex justify-between items-center mb-4 border-b pb-2">
       <h2 class="text-xl font-bold">🛒 Tu carrito</h2>
@@ -35,148 +33,117 @@
     <a href="/carrito" class="block mt-4 text-center bg-blue-700 text-white py-2 rounded hover:bg-blue-800">Ir al carrito</a>
   </div>
 
+  <!-- ✅ Botón de WhatsApp -->
+  <a href="https://wa.me/5493795036085?text=Hola%20quiero%20hacer%20una%20consulta%20sobre%20los%20repuestos" target="_blank" aria-label="WhatsApp" class="fixed bottom-24 right-6 bg-white rounded-full shadow-lg p-2 z-50 hover:scale-105 transition-transform">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png" alt="WhatsApp" class="w-10 h-10">
+  </a>
 
-<!-- Botón flotante de WhatsApp -->
-<a href="https://wa.me/5493795036085?text=Hola%20quiero%20hacer%20una%20consulta%20sobre%20los%20repuestos"
-   target="_blank"
-   aria-label="WhatsApp"
-   class="fixed bottom-24 right-6 bg-white rounded-full shadow-lg p-2 z-50 hover:scale-105 transition-transform">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png" alt="WhatsApp" class="w-10 h-10">
-</a>
-
-
- <!-- 🔘 Botón flotante para abrir el carrito (estilo empresarial) -->
-<button onclick="abrirCarrito()"
-  class="fixed bottom-6 right-6 bg-white p-3 rounded-full shadow-lg z-50 hover:shadow-xl transition"
-  aria-label="Carrito">
-  <img src="https://cdn-icons-png.flaticon.com/512/3144/3144456.png" alt="Carrito" class="w-7 h-7">
-  <span id="contadorCarrito" class="absolute -top-2 -right-2 bg-red-600 text-white text-xs font-bold w-5 h-5 flex items-center justify-center rounded-full">0</span>
-</button>
-
-
-<script>
-  const panel = document.getElementById("carritoPanel");
-  const botonCarrito = document.getElementById("botonCarrito");
-  const contenedor = document.getElementById("carritoContenido");
-
-  botonCarrito.addEventListener("click", abrirCarrito);
-
+   <!-- 🔘 Botón flotante para abrir el carrito (estilo empresarial) -->
+  <button onclick="abrirCarrito()"
+    class="fixed bottom-6 right-6 bg-white p-3 rounded-full shadow-lg z-50 hover:shadow-xl transition"
+    aria-label="Carrito">
+    <img src="https://cdn-icons-png.flaticon.com/512/3144/3144456.png" alt="Carrito" class="w-7 h-7">
+    <span id="contadorCarrito" class="absolute -top-2 -right-2 bg-red-600 text-white text-xs font-bold w-5 h-5 flex items-center justify-center rounded-full">0</span>
+  </button>
   
-  document.addEventListener("DOMContentLoaded", actualizarContadorCarrito);
-
-  
-  async function abrirCarrito() {
-    const estaAbierto = !panel.classList.contains("translate-x-full");
-    if (estaAbierto) {
-      panel.classList.add("translate-x-full"); // Cierra si está abierto
-      return;
-    }
-
-    panel.classList.remove("translate-x-full"); // Abre si está cerrado
-
-    const res = await fetch("/carrito/json");
-    const productos = await res.json();
-
-    if (productos.length === 0) {
-      contenedor.innerHTML = "<p class='text-gray-600'>Tu carrito está vacío.</p>";
-      return;
-    }
-
-    let html = "";
-    let total = 0;
-
-    productos.forEach(p => {
-      total += p.subtotal;
-      html += `
-        <div class="border-b pb-2">
-          <h3 class="font-semibold">${p.nombre}</h3>
-          <p class="text-sm text-gray-500">Código: ${p.codigo}</p>
-          <p class="text-sm">Cantidad: ${p.cantidad}</p>
-          <p class="text-sm">Subtotal: $${p.subtotal.toLocaleString("es-AR", { minimumFractionDigits: 2 })}</p>
-          <button onclick="eliminarProducto('${p.codigo}')" class="mt-1 text-red-600 text-xs hover:underline">Eliminar</button>
-        </div>
-      `;
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      actualizarContadorCarrito();
+      const botonCarrito = document.getElementById("botonCarrito");
+      if (botonCarrito) {
+        botonCarrito.addEventListener("click", abrirCarrito);
+      }
     });
 
-    html += `<p class="mt-4 font-bold text-right">Total: $${total.toLocaleString("es-AR", { minimumFractionDigits: 2 })}</p>`;
-    contenedor.innerHTML = html;
-  }
+    async function abrirCarrito() {
+      const panel = document.getElementById("carritoPanel");
+      const contenedor = document.getElementById("carritoContenido");
+      const estaAbierto = !panel.classList.contains("translate-x-full");
+      if (estaAbierto) {
+        panel.classList.add("translate-x-full");
+        return;
+      }
+      panel.classList.remove("translate-x-full");
 
-  async function eliminarProducto(codigo) {
-    await fetch("/api/carrito/eliminar", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ codigo })
-    });
-    abrirCarrito(); // Refresca el panel
-    mostrarNotificacion("Producto eliminado ❌");
-    actualizarContadorCarrito();
-  }
+      const res = await fetch("/carrito/json");
+      const productos = await res.json();
+      if (productos.length === 0) {
+        contenedor.innerHTML = "<p class='text-gray-600'>Tu carrito está vacío.</p>";
+        return;
+      }
 
-  async function actualizarContadorCarrito() {
-    const res = await fetch("/carrito/json");
-    const productos = await res.json();
-    const total = productos.reduce((acc, p) => acc + p.cantidad, 0);
-    const contador = document.getElementById("contadorCarrito");
-    if (contador) {
-      contador.textContent = total;
-      contador.classList.remove("hidden");
+      let html = "";
+      let total = 0;
+      productos.forEach(p => {
+        total += p.subtotal;
+        html += `
+          <div class="border-b pb-2">
+            <h3 class="font-semibold">${p.nombre}</h3>
+            <p class="text-sm text-gray-500">Código: ${p.codigo}</p>
+            <p class="text-sm">Cantidad: ${p.cantidad}</p>
+            <p class="text-sm">Subtotal: $${p.subtotal.toLocaleString("es-AR", { minimumFractionDigits: 2 })}</p>
+            <button onclick="eliminarProducto('${p.codigo}')" class="mt-1 text-red-600 text-xs hover:underline">Eliminar</button>
+          </div>
+        `;
+      });
+
+      html += `<p class="mt-4 font-bold text-right">Total: $${total.toLocaleString("es-AR", { minimumFractionDigits: 2 })}</p>`;
+      contenedor.innerHTML = html;
     }
-  }
 
- function mostrarNotificacion(mensaje = "Producto agregado al carrito ✅") {
-  const noti = document.getElementById("notificacionCarrito");
-  if (!noti) return;
-  noti.textContent = mensaje;
-  noti.classList.remove("hidden");
-  noti.classList.add("opacity-100");
+    async function eliminarProducto(codigo) {
+      await fetch("/api/carrito/eliminar", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ codigo })
+      });
+      abrirCarrito();
+      mostrarNotificacion("Producto eliminado ❌");
+      actualizarContadorCarrito();
+    }
 
-  setTimeout(() => {
-    noti.classList.remove("opacity-100");
-    setTimeout(() => noti.classList.add("hidden"), 300); // espera que se desvanezca
-  }, 2000);
-}
+    function mostrarNotificacion(mensaje = "Producto agregado al carrito ✅") {
+      const noti = document.getElementById("notificacionCarrito");
+      if (!noti) return;
+      noti.textContent = mensaje;
+      noti.classList.remove("hidden", "opacity-0");
+      noti.classList.add("opacity-100");
+      setTimeout(() => {
+        noti.classList.remove("opacity-100");
+        setTimeout(() => noti.classList.add("hidden"), 300);
+      }, 2000);
+    }
 
-async function agregarAlCarrito(codigo) {
-  const cantidad = parseInt(document.querySelector('input[name="cantidad"]').value) || 1;
+    async function agregarAlCarrito(codigo) {
+      const cantidad = parseInt(document.querySelector('input[name="cantidad"]').value) || 1;
+      const carrito = JSON.parse(localStorage.getItem("carrito")) || {};
+      carrito[codigo] = (carrito[codigo] || 0) + cantidad;
+      localStorage.setItem("carrito", JSON.stringify(carrito));
 
-  // Guardar en localStorage
-  const carrito = JSON.parse(localStorage.getItem("carrito")) || {};
-  carrito[codigo] = (carrito[codigo] || 0) + cantidad;
-  localStorage.setItem("carrito", JSON.stringify(carrito));
+      await fetch("/carrito/agregar", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ codigo, cantidad })
+      });
 
-  // Llamar al backend para agregar en sesión
-  await fetch("/carrito/agregar", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ codigo, cantidad })
-  });
+      mostrarNotificacion();
+      actualizarContadorCarrito();
+    }
 
-  // Mostrar notificación
-  mostrarNotificacion();
-  actualizarContadorCarrito();
-}
+    function actualizarContadorCarrito() {
+      const carrito = JSON.parse(localStorage.getItem("carrito")) || {};
+      const total = Object.values(carrito).reduce((acc, cantidad) => acc + cantidad, 0);
+      const contador = document.getElementById("contadorCarrito");
+      if (contador) {
+        contador.textContent = total;
+        contador.classList.remove("hidden");
+      }
+    }
 
-function actualizarContadorCarrito() {
-  const carrito = JSON.parse(localStorage.getItem("carrito")) || {};
-  const total = Object.values(carrito).reduce((acc, cantidad) => acc + cantidad, 0);
-  document.getElementById("contadorCarrito").textContent = total;
-}
-
-  function mostrarNotificacion(mensaje) {
-    const notif = document.getElementById("notificacionCarrito")
-    notif.textContent = mensaje
-    notif.classList.remove("hidden", "opacity-0")
-    notif.classList.add("opacity-100")
-
-    setTimeout(() => {
-      notif.classList.add("opacity-0")
-      setTimeout(() => notif.classList.add("hidden"), 300)
-    }, 2500)
-  }
-  
-</script>
+    function cerrarCarrito() {
+      document.getElementById("carritoPanel").classList.add("translate-x-full");
+    }
+  </script>
 
 </body>
-
 </html>

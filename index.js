@@ -83,7 +83,9 @@ app.get("/producto/:codigo", (req, res) => {
 
 // AUTENTICACIÓN
 app.get("/login", (req, res) => res.render("login", { title: "Iniciar sesión", user: res.locals.user }))
-app.get("/register", (req, res) => res.render("register"))
+app.get("/register", (req, res) => {
+  res.render("register", { user: res.locals.user });
+});
 
 app.post("/login", async (req, res) => {
   const { username, password } = req.body
