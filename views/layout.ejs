@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title><%= typeof title !== 'undefined' ? title : 'Repuestos Méndez' %></title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="/favicon.png" type="image/png">
@@ -9,22 +9,23 @@
 </head>
 <body class="bg-gray-100 text-gray-800 font-sans">
 
+  <!-- Header -->
   <%- include('partials/header') %>
 
-  <!-- ✅ Notificación flotante -->
-  <div id="notificacionCarrito" class="fixed top-[4.5rem] left-4 right-4 max-w-screen-xl mx-auto bg-green-600 text-white px-6 py-3 rounded shadow-lg z-50 hidden opacity-0 transition-opacity duration-300 text-center text-sm sm:text-base">
+  <!-- Notificación -->
+  <div id="notificacionCarrito" class="fixed top-[4.5rem] left-4 right-4 mx-auto max-w-full sm:max-w-screen-sm bg-green-600 text-white px-4 py-3 rounded shadow-lg z-50 hidden opacity-0 transition-opacity duration-300 text-center text-sm">
     Producto agregado al carrito ✅
   </div>
 
-  <!-- ✅ Cuerpo dinámico -->
-  <main class="p-6">
+  <!-- Contenido -->
+  <main class="p-4 sm:p-6">
     <%- body %>
   </main>
 
-  <!-- ✅ Panel lateral del carrito -->
-  <div id="carritoPanel" class="fixed right-0 top-0 h-full w-80 bg-white shadow-lg z-50 p-4 transform translate-x-full transition-transform duration-300 overflow-y-auto">
+  <!-- Panel lateral del carrito -->
+  <div id="carritoPanel" class="fixed right-0 top-0 h-full w-full max-w-xs sm:max-w-sm bg-white shadow-lg z-50 p-4 transform translate-x-full transition-transform duration-300 overflow-y-auto">
     <div class="flex justify-between items-center mb-4 border-b pb-2">
-      <h2 class="text-xl font-bold">🛒 Tu carrito</h2>
+      <h2 class="text-lg sm:text-xl font-bold">🛒 Tu carrito</h2>
       <button onclick="cerrarCarrito()" class="text-gray-600 text-2xl font-bold">&times;</button>
     </div>
     <div id="carritoContenido" class="space-y-4 text-sm text-gray-800">
@@ -33,26 +34,28 @@
     <a href="/carrito" class="block mt-4 text-center bg-blue-700 text-white py-2 rounded hover:bg-blue-800">Ir al carrito</a>
   </div>
 
-  <!-- ✅ Botón de WhatsApp -->
-  <a href="https://wa.me/5493795036085?text=Hola%20quiero%20hacer%20una%20consulta%20sobre%20los%20repuestos" target="_blank" aria-label="WhatsApp" class="fixed bottom-24 right-6 bg-white rounded-full shadow-lg p-2 z-50 hover:scale-105 transition-transform">
+  <!-- WhatsApp -->
+  <a href="https://wa.me/5493795036085?text=Hola%20quiero%20hacer%20una%20consulta%20sobre%20los%20repuestos"
+     target="_blank"
+     aria-label="WhatsApp"
+     class="fixed bottom-24 right-4 sm:right-6 bg-white rounded-full shadow-lg p-2 z-50 hover:scale-105 transition-transform">
     <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png" alt="WhatsApp" class="w-10 h-10">
   </a>
 
-   <!-- 🔘 Botón flotante para abrir el carrito (estilo empresarial) -->
+  <!-- 🔘 Botón flotante para abrir el carrito (estilo empresarial) -->
   <button onclick="abrirCarrito()"
     class="fixed bottom-6 right-6 bg-white p-3 rounded-full shadow-lg z-50 hover:shadow-xl transition"
     aria-label="Carrito">
     <img src="https://cdn-icons-png.flaticon.com/512/3144/3144456.png" alt="Carrito" class="w-7 h-7">
     <span id="contadorCarrito" class="absolute -top-2 -right-2 bg-red-600 text-white text-xs font-bold w-5 h-5 flex items-center justify-center rounded-full">0</span>
   </button>
-  
+
+  <!-- Scripts -->
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       actualizarContadorCarrito();
       const botonCarrito = document.getElementById("botonCarrito");
-      if (botonCarrito) {
-        botonCarrito.addEventListener("click", abrirCarrito);
-      }
+      if (botonCarrito) botonCarrito.addEventListener("click", abrirCarrito);
     });
 
     async function abrirCarrito() {
@@ -72,8 +75,7 @@
         return;
       }
 
-      let html = "";
-      let total = 0;
+      let html = "", total = 0;
       productos.forEach(p => {
         total += p.subtotal;
         html += `
@@ -102,9 +104,12 @@
       actualizarContadorCarrito();
     }
 
+    function cerrarCarrito() {
+      document.getElementById("carritoPanel").classList.add("translate-x-full");
+    }
+
     function mostrarNotificacion(mensaje = "Producto agregado al carrito ✅") {
       const noti = document.getElementById("notificacionCarrito");
-      if (!noti) return;
       noti.textContent = mensaje;
       noti.classList.remove("hidden", "opacity-0");
       noti.classList.add("opacity-100");
@@ -114,34 +119,11 @@
       }, 2000);
     }
 
-    async function agregarAlCarrito(codigo) {
-      const cantidad = parseInt(document.querySelector('input[name="cantidad"]').value) || 1;
-      const carrito = JSON.parse(localStorage.getItem("carrito")) || {};
-      carrito[codigo] = (carrito[codigo] || 0) + cantidad;
-      localStorage.setItem("carrito", JSON.stringify(carrito));
-
-      await fetch("/carrito/agregar", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ codigo, cantidad })
-      });
-
-      mostrarNotificacion();
-      actualizarContadorCarrito();
-    }
-
     function actualizarContadorCarrito() {
       const carrito = JSON.parse(localStorage.getItem("carrito")) || {};
       const total = Object.values(carrito).reduce((acc, cantidad) => acc + cantidad, 0);
       const contador = document.getElementById("contadorCarrito");
-      if (contador) {
-        contador.textContent = total;
-        contador.classList.remove("hidden");
-      }
-    }
-
-    function cerrarCarrito() {
-      document.getElementById("carritoPanel").classList.add("translate-x-full");
+      if (contador) contador.textContent = total;
     }
   </script>
 
