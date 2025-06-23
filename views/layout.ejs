@@ -52,11 +52,18 @@
 
   <!-- Scripts -->
   <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      actualizarContadorCarrito();
-      const botonCarrito = document.getElementById("botonCarrito");
-      if (botonCarrito) botonCarrito.addEventListener("click", abrirCarrito);
-    });
+    document.addEventListener("DOMContentLoaded", async () => {
+    const res = await fetch("/carrito/json");
+    const productos = await res.json();
+    const carrito = {};
+    productos.forEach(p => carrito[p.codigo] = p.cantidad);
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+    actualizarContadorCarrito();
+
+    const botonCarrito = document.getElementById("botonCarrito");
+    if (botonCarrito) {
+      botonCarrito.addEventListener("click", abrirCarrito);
+    }
 
     async function abrirCarrito() {
       const panel = document.getElementById("carritoPanel");
