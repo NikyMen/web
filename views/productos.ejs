@@ -7,19 +7,31 @@
 
   <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-6">
     <% productos.forEach((p) => { %>
-      <div class="bg-white rounded shadow p-4 transition transform hover:shadow-lg hover:-translate-y-2 flex flex-col justify-between">
+      <div class="bg-white rounded shadow p-4 transition transform hover:shadow-lg hover:-translate-y-2 flex flex-col sm:flex-col">
 
-        <img src="<%= p.imagen %>" alt="<%= p.nombre %>" class="w-full h-40 object-contain mb-3" />
-        <h3 class="font-bold text-gray-900 text-sm mb-1"><%= p.nombre %></h3>
-        <p class="text-blue-700 font-semibold mb-3">$ <%= p.precio.toLocaleString('es-AR') %></p>
+        <!-- Mobile: diseño horizontal -->
+        <div class="flex flex-row sm:flex-col gap-3 items-center sm:items-start">
+          <img src="<%= p.imagen %>" alt="<%= p.nombre %>" class="w-28 h-28 object-contain flex-shrink-0 sm:w-full sm:h-40" />
 
-        <div class="flex gap-2 mt-auto">
-          <a href="/producto/<%= p.codigo.trim() %>" class="flex-1 text-center bg-blue-700 text-white px-3 py-2 rounded text-sm font-semibold hover:bg-blue-800">
-            🔍 Ver detalle
-          </a>
-          
+          <div class="flex flex-col justify-between h-full w-full sm:hidden">
+            <h3 class="font-bold text-gray-900 text-sm"><%= p.nombre %></h3>
+            <p class="text-blue-700 font-semibold my-1">$ <%= p.precio.toLocaleString('es-AR') %></p>
+            <a href="/producto/<%= p.codigo.trim() %>"
+               class="bg-blue-700 text-white px-3 py-1.5 rounded text-xs font-semibold text-center hover:bg-blue-800">
+              🔍 Ver detalle
+            </a>
+          </div>
         </div>
 
+        <!-- Desktop: info completa vertical -->
+        <div class="hidden sm:block mt-4">
+          <h3 class="font-bold text-gray-900 text-sm mb-1"><%= p.nombre %></h3>
+          <p class="text-blue-700 font-semibold mb-3">$ <%= p.precio.toLocaleString('es-AR') %></p>
+          <a href="/producto/<%= p.codigo.trim() %>"
+             class="block text-center bg-blue-700 text-white px-3 py-2 rounded text-sm font-semibold hover:bg-blue-800">
+            🔍 Ver detalle
+          </a>
+        </div>
       </div>
     <% }); %>
   </div>
