@@ -7,8 +7,8 @@
   <link rel="icon" href="/favicon.png" type="image/png">
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body class="bg-gray-100 text-gray-800 font-sans">
-
+<body class="relative z-0 bg-gray-100 text-gray-800 font-sans"></body>
+  <canvas id="fondoAnimado" class="fixed top-0 left-0 w-full h-full -z-10 pointer-events-none opacity-30"></canvas>
   <%- include('partials/header') %>
 
   <div id="notificacionCarrito" class="fixed top-[4.5rem] left-4 right-4 mx-auto max-w-full sm:max-w-screen-sm bg-green-600 text-white px-4 py-3 rounded shadow-lg z-50 hidden opacity-0 transition-opacity duration-300 text-center text-sm">
@@ -131,6 +131,44 @@
       const contador = document.getElementById("contadorCarrito");
       if (contador) contador.textContent = total;
     }
+
+    // Fondo básico tipo "niebla de tornillos"
+  const canvas = document.getElementById('fondoAnimado');
+  const ctx = canvas.getContext('2d');
+  let width = canvas.width = window.innerWidth;
+  let height = canvas.height = window.innerHeight;
+
+  const tornillos = Array.from({ length: 60 }, () => ({
+    x: Math.random() * width,
+    y: Math.random() * height,
+    r: Math.random() * 1.5 + 1,
+    dx: (Math.random() - 0.5) * 0.5,
+    dy: (Math.random() - 0.5) * 0.5
+  }));
+
+  function animar() {
+    ctx.clearRect(0, 0, width, height);
+    tornillos.forEach(t => {
+      ctx.beginPath();
+      ctx.arc(t.x, t.y, t.r, 0, Math.PI * 2);
+      ctx.fillStyle = '#6b7280'; // gris
+      ctx.fill();
+
+      t.x += t.dx;
+      t.y += t.dy;
+
+      if (t.x < 0 || t.x > width) t.dx *= -1;
+      if (t.y < 0 || t.y > height) t.dy *= -1;
+    });
+    requestAnimationFrame(animar);
+  }
+
+  animar();
+  window.addEventListener('resize', () => {
+    width = canvas.width = window.innerWidth;
+    height = canvas.height = window.innerHeight;
+  });
+
   </script>
 </body>
 </html>
