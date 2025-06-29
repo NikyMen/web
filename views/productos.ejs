@@ -34,7 +34,7 @@
           <p class="text-blue-700 font-semibold mb-3">$ <%= p.precio.toLocaleString('es-AR') %></p>
           <div class="flex gap-2 mt-auto">
             <a href="/producto/<%= p.codigo.trim() %>" class="w-1/2 text-center bg-blue-700 text-white px-3 py-2 rounded text-sm font-semibold hover:bg-blue-800">
-              🔍 Detalle
+              🔍 Ver producto
             </a>
             <button onclick="agregarAlCarritoDesdeCatalogo('<%= p.codigo.trim() %>')" class="w-1/2 text-center bg-green-600 text-white px-3 py-2 rounded text-sm font-semibold hover:bg-green-700">
               🛒 Agregar
