@@ -200,6 +200,4 @@ app.post("/nosotros", (req, res) => {
 app.get("/ayuda", (req, res) => res.render("ayuda", { user: res.locals.user }))
 
 // INICIAR SERVIDOR
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`)
-})
+export default app
