@@ -16,7 +16,7 @@ const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
 const app = express()
-const carrito = {} // Almacenamiento temporal de carrito en memoria
+const carrito = {}
 
 // MIDDLEWARES
 app.use(expressLayouts)
@@ -29,7 +29,6 @@ app.use(express.urlencoded({ extended: true }))
 app.use(cookieParser())
 app.use(express.static(path.join(__dirname, "public")))
 
-// Autenticación por token
 app.use((req, res, next) => {
   const token = req.cookies.user
   if (!token) return next()
@@ -41,9 +40,9 @@ app.use((req, res, next) => {
   next()
 })
 
-// RUTAS PRINCIPALES
+// RUTAS
 app.get("/", (req, res) => {
-  const productos = JSON.parse(fs.readFileSync(path.join(__dirname, "data", "productos.json"), "utf-8"))
+  const productos = JSON.parse(fs.readFileSync(path.join(__dirname, "data", "ofertas.json"), "utf-8"))
   res.render("index", {
     username: res.locals.user?.username || null,
     user: res.locals.user,
@@ -83,9 +82,7 @@ app.get("/producto/:codigo", (req, res) => {
 
 // AUTENTICACIÓN
 app.get("/login", (req, res) => res.render("login", { title: "Iniciar sesión", user: res.locals.user }))
-app.get("/register", (req, res) => {
-  res.render("register", { user: res.locals.user });
-});
+app.get("/register", (req, res) => res.render("register", { user: res.locals.user }))
 
 app.post("/login", async (req, res) => {
   const { username, password } = req.body
@@ -171,15 +168,13 @@ app.post("/carrito/finalizar", (req, res) => {
 
   const link = `https://wa.me/5493795036085?text=${encodeURIComponent(mensaje)}`
 
-  // Guardar historial
-  const historialPath = path.join(fs.readFileSync(path.join(__dirname, "data", "historial-pedidos.json"), "utf-8"))
+  const historialPath = path.join(__dirname, "data", "historial-pedidos.json")
   const historial = fs.existsSync(historialPath)
     ? JSON.parse(fs.readFileSync(historialPath, "utf-8"))
     : []
   historial.push({ nombre, telefono, productos: productosEnCarrito, total, fecha: new Date().toISOString() })
   fs.writeFileSync(historialPath, JSON.stringify(historial, null, 2))
 
-  // Limpiar carrito
   Object.keys(carrito).forEach(c => delete carrito[c])
   res.redirect(link)
 })
