@@ -43,7 +43,7 @@ app.use((req, res, next) => {
 
 // RUTAS PRINCIPALES
 app.get("/", (req, res) => {
-  const productos = JSON.parse(fs.readFileSync("./data/ofertas.json", "utf-8"))
+  const productos = JSON.parse(fs.readFileSync(path.join(__dirname, "data", "productos.json"), "utf-8"))
   res.render("index", {
     username: res.locals.user?.username || null,
     user: res.locals.user,
@@ -52,8 +52,8 @@ app.get("/", (req, res) => {
 })
 
 app.get("/productos", (req, res) => {
-  const productos = JSON.parse(fs.readFileSync("./data/productos.json", "utf-8"))
-  const ofertas = JSON.parse(fs.readFileSync("./data/ofertas.json", "utf-8"))
+  const productos = JSON.parse(fs.readFileSync(path.join(__dirname, "data", "productos.json"), "utf-8"))
+  const ofertas = JSON.parse(fs.readFileSync(path.join(__dirname, "data", "ofertas.json"), "utf-8"))
   const termino = req.query.buscar?.toLowerCase() || ""
   const page = parseInt(req.query.page) || 1
   const limit = 24
@@ -75,7 +75,7 @@ app.get("/productos", (req, res) => {
 })
 
 app.get("/producto/:codigo", (req, res) => {
-  const productos = JSON.parse(fs.readFileSync("./data/productos.json", "utf-8"))
+  const productos = JSON.parse(fs.readFileSync(path.join(__dirname, "data", "productos.json"), "utf-8"))
   const producto = productos.find(p => p.codigo.trim() === req.params.codigo)
   if (!producto) return res.status(404).send("Producto no encontrado")
   res.render("producto", { producto, user: res.locals.user })
@@ -116,7 +116,7 @@ app.post("/logout", (req, res) => {
 
 // CARRITO
 app.get("/carrito", (req, res) => {
-  const productosTodos = JSON.parse(fs.readFileSync("./data/productos.json", "utf-8"))
+  const productosTodos = JSON.parse(fs.readFileSync(path.join(__dirname, "data", "productos.json"), "utf-8"))
   const productosEnCarrito = Object.entries(carrito).map(([codigo, cantidad]) => {
     const producto = productosTodos.find(p => p.codigo.trim() === codigo.trim())
     return producto ? { ...producto, cantidad, subtotal: producto.precio * cantidad } : null
@@ -145,7 +145,7 @@ app.post("/api/carrito/eliminar", (req, res) => {
 })
 
 app.get("/carrito/json", (req, res) => {
-  const productosTodos = JSON.parse(fs.readFileSync("./data/productos.json", "utf-8"))
+  const productosTodos = JSON.parse(fs.readFileSync(path.join(__dirname, "data", "productos.json"), "utf-8"))
   const productosEnCarrito = Object.entries(carrito).map(([codigo, cantidad]) => {
     const producto = productosTodos.find(p => p.codigo.trim() === codigo.trim())
     return producto ? { ...producto, cantidad, subtotal: producto.precio * cantidad } : null
@@ -156,7 +156,7 @@ app.get("/carrito/json", (req, res) => {
 app.post("/carrito/finalizar", (req, res) => {
   const nombre = req.body.nombre || "Usuario sin nombre"
   const telefono = req.body.telefono || "Sin número"
-  const productosTodos = JSON.parse(fs.readFileSync("./data/productos.json", "utf-8"))
+  const productosTodos = JSON.parse(fs.readFileSync(path.join(__dirname, "data", "productos.json"), "utf-8"))
   const productosEnCarrito = Object.entries(carrito).map(([codigo, cantidad]) => {
     const producto = productosTodos.find(p => p.codigo.trim() === codigo.trim())
     return producto ? { ...producto, cantidad, subtotal: producto.precio * cantidad } : null
@@ -172,7 +172,7 @@ app.post("/carrito/finalizar", (req, res) => {
   const link = `https://wa.me/5493795036085?text=${encodeURIComponent(mensaje)}`
 
   // Guardar historial
-  const historialPath = path.join(__dirname, "data", "historial-pedidos.json")
+  const historialPath = path.join(fs.readFileSync(path.join(__dirname, "data", "historial-pedidos.json"), "utf-8"))
   const historial = fs.existsSync(historialPath)
     ? JSON.parse(fs.readFileSync(historialPath, "utf-8"))
     : []
@@ -186,7 +186,7 @@ app.post("/carrito/finalizar", (req, res) => {
 
 // PÁGINAS ESTÁTICAS
 app.get("/ofertas", (req, res) => {
-  const productos = JSON.parse(fs.readFileSync("./data/ofertas.json"))
+  const productos = JSON.parse(fs.readFileSync(path.join(__dirname, "data", "ofertas.json"), "utf-8"))
   res.render("ofertas", { productos, user: res.locals.user })
 })
 
