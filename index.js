@@ -8,7 +8,6 @@ import jwt from "jsonwebtoken"
 import expressLayouts from "express-ejs-layouts"
 
 // CONFIG PROPIA
-import { PORT } from "./config.js"
 import { UserRepository } from "./user-repository.js"
 
 const SECRET_KEY = "mi_clave_secreta"
