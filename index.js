@@ -10,7 +10,7 @@ import expressLayouts from "express-ejs-layouts"
 // CONFIG PROPIA
 import { UserRepository } from "./user-repository.js"
 
-const SECRET_KEY = "mi_clave_secreta"
+const SECRET_KEY = process.env.SECRET_KEY
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
