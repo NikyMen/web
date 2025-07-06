@@ -3,20 +3,15 @@ import mongoose from "mongoose";
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
+import connectToDatabase from "./lib/db.js";
 import Product from "./models/Product.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const MONGODB_URI = process.env.MONGODB_URI;
-
-if (!MONGODB_URI) {
-  console.error("MONGODB_URI no está definida en las variables de entorno.");
-  process.exit(1);
-}
-
-mongoose.connect(MONGODB_URI)
-  .then(async () => {
+const importData = async () => {
+  try {
+    await connectToDatabase();
     console.log("Conectado a MongoDB Atlas para importación.");
 
     try {
@@ -43,10 +38,16 @@ mongoose.connect(MONGODB_URI)
     } catch (error) {
       console.error("Error durante la importación de datos:", error);
     } finally {
-      mongoose.disconnect();
+      // En un script que se ejecuta una sola vez como este, no es necesario desconectar manualmente.
+      // El proceso de Node.js se cerrará y la conexión se terminará de forma natural.
+      // De hecho, llamar a `mongoose.disconnect()` aquí es problemático porque cierra la conexión
+      // global en caché que tu aplicación principal (index.js) intenta reutilizar, causando errores.
+      console.log("Importación finalizada. La conexión se cerrará al terminar el proceso.");
     }
-  })
-  .catch(err => {
+  } catch (err) {
     console.error("Error al conectar a MongoDB Atlas para importación:", err);
     process.exit(1);
-  });
+  }
+};
+
+importData();

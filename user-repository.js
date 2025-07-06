@@ -2,19 +2,8 @@
 import mongoose from "mongoose"; // Importa Mongoose
 import crypto from "crypto";     // genera UUID para los IDs
 import bcrypt from "bcryptjs";   // encripta y compara contraseñas
-import { SALT_ROUNDS } from "./config.js";
-
-// Conexión a MongoDB
-// La URI de conexión se obtiene de las variables de entorno
-const MONGODB_URI = process.env.MONGODB_URI;
-
-if (!MONGODB_URI) {
-  throw new Error("MONGODB_URI no está definida en las variables de entorno.");
-}
-
-mongoose.connect(MONGODB_URI)
-  .then(() => console.log("Conectado a MongoDB Atlas"))
-  .catch(err => console.error("Error al conectar a MongoDB Atlas:", err));
+import { SALT_ROUNDS } from "./config.js"; // Asegúrate que config.js esté correcto
+import connectToDatabase from "./lib/db.js";
 
 // Define el esquema de usuario con Mongoose
 const UserSchema = new mongoose.Schema({
@@ -28,6 +17,8 @@ const User = mongoose.model("User", UserSchema);
 
 // Clase con métodos para manejar usuarios
 export class UserRepository {
+  // No es necesario conectar en cada método si el modelo ya está asociado a una conexión
+  // Mongoose gestiona esto internamente una vez que la conexión se establece.
   static async create({ username, password }) {
     Validation.username(username);
     Validation.password(password);
@@ -38,7 +29,7 @@ export class UserRepository {
       throw new Error("Username already exists");
     }
 
-    const id = crypto.randomUUID();
+    const id = crypto.randomUUID(); // _id será un string
     const hashedPassword = bcrypt.hashSync(password, SALT_ROUNDS);
 
     // Crea y guarda el nuevo usuario usando Mongoose

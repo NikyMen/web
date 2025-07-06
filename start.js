@@ -1,4 +1,5 @@
 // start.js
+import "dotenv/config"; // Importa dotenv/config al principio para cargar las variables de entorno
 import app from "./index.js"
 
 const PORT = process.env.PORT || 3000
