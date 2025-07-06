@@ -6,7 +6,6 @@ import { fileURLToPath } from "url"
 import cookieParser from "cookie-parser"
 import jwt from "jsonwebtoken"
 import expressLayouts from "express-ejs-layouts"
-import "express-async-errors";
 
 // CONFIG PROPIA
 import { SECRET_KEY } from "./config.js"
