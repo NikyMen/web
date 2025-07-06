@@ -1,4 +1,7 @@
 // C:/Users/nikom/Dev/web/importData.js
+import dotenv from "dotenv";
+dotenv.config({ path: ".env.local" }); // Carga las variables desde .env.local
+
 import mongoose from "mongoose";
 import fs from "fs";
 import path from "path";
