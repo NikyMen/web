@@ -15,39 +15,30 @@
     🚚 Envío gratis en compras mayores a $80.000 en Corrientes
   </div>
 
-  <!-- Ofertas  -->
+  <!-- Ofertas con Swiper.js -->
   <section class="bg-white p-4 rounded shadow mb-8 max-w-screen-xl mx-auto">
-  <h2 class="text-xl font-semibold mb-4">Inspirado en lo último que viste</h2>
+    <h2 class="text-xl font-semibold mb-4">Inspirado en lo último que viste</h2>
 
-  <div class="relative">
-    <!-- Botón izquierdo -->
-    <button onclick="moverCarrusel(-1)" class="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-white shadow p-2 rounded-full hidden sm:block">
-      ◀
-    </button>
-
-    <!-- Carrusel -->
-    <div id="carruselProductos" class="flex gap-4 overflow-x-hidden scroll-smooth">
-      <% productos.forEach(p => { %>
-        <div class="min-w-[200px] sm:min-w-[220px] bg-white border rounded p-3 flex-shrink-0">
-          <img src="<%= p.imagen %>" alt="<%= p.nombre %>" class="w-full h-24 object-contain mb-2" />
-          <h3 class="text-sm font-medium text-gray-800 truncate"><%= p.nombre %></h3>
-          <p class="text-lg font-bold text-gray-900 mt-1">$ <%= p.precio.toLocaleString('es-AR') %></p>
-          <p class="text-green-600 text-sm mt-1">Envío gratis</p>
-        </div>
-      <% }) %>
+    <!-- Swiper -->
+    <div class="swiper-container relative">
+      <div class="swiper-wrapper">
+        <% productos.forEach(p => { %>
+          <div class="swiper-slide">
+            <div class="bg-white border rounded p-3 flex flex-col h-full">
+              <img src="<%= p.imagen %>" alt="<%= p.nombre %>" class="w-full h-24 object-contain mb-2" />
+              <h3 class="text-sm font-medium text-gray-800 truncate flex-grow"><%= p.nombre %></h3>
+              <p class="text-lg font-bold text-gray-900 mt-1">$ <%= p.precio.toLocaleString('es-AR') %></p>
+              <p class="text-green-600 text-sm mt-1">Envío gratis</p>
+            </div>
+          </div>
+        <% }) %>
+      </div>
+      <!-- Add Pagination -->
+      <div class="swiper-pagination"></div>
+      <!-- Add Navigation -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
     </div>
-
-    <!-- Botón derecho -->
-    <button onclick="moverCarrusel(1)" class="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-white shadow p-2 rounded-full hidden sm:block">
-      ▶
-    </button>
-  </div>
-
-  <!-- Paginación -->
-  <div id="indicadoresCarrusel" class="flex justify-center mt-4 gap-2">
-    <!-- Se llenará dinámicamente -->
-  </div>
-</section>
   </section>
 
   <!-- Categorías -->
@@ -95,62 +86,33 @@
   </section>
 
 <script>
-  const carrusel = document.getElementById("carruselProductos");
-  const indicadores = document.getElementById("indicadoresCarrusel");
-  const tarjetasPorVista = 4;
-
-  // Cálculo total de "páginas" basado en el número de elementos
-  const totalProductos = carrusel.children.length;
-  const totalPaginas = Math.ceil(totalProductos / tarjetasPorVista);
-  let paginaActual = 0;
-
-  // Crear puntitos
-  for (let i = 0; i < totalPaginas; i++) {
-    const punto = document.createElement("div");
-    punto.className = "w-2 h-2 rounded-full bg-gray-300 cursor-pointer";
-    punto.addEventListener("click", () => moverACarrusel(i));
-    indicadores.appendChild(punto);
-  }
-
-  actualizarIndicadores();
-
-  function moverCarrusel(direccion) {
-    paginaActual = Math.max(0, Math.min(totalPaginas - 1, paginaActual + direccion));
-    carrusel.scrollTo({
-      left: paginaActual * carrusel.offsetWidth,
-      behavior: "smooth"
+  document.addEventListener('DOMContentLoaded', function () {
+    var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 4,
+          spaceBetween: 40,
+        },
+        1024: {
+          slidesPerView: 5,
+          spaceBetween: 50,
+        },
+      }
     });
-    actualizarIndicadores();
-  }
-
-  function moverACarrusel(pagina) {
-    paginaActual = pagina;
-    carrusel.scrollTo({
-      left: pagina * carrusel.offsetWidth,
-      behavior: "smooth"
-    });
-    actualizarIndicadores();
-  }
-
-  function actualizarIndicadores() {
-    const puntos = indicadores.children;
-    for (let i = 0; i < puntos.length; i++) {
-      puntos[i].classList.remove("bg-blue-500");
-      puntos[i].classList.add("bg-gray-300");
-    }
-    if (puntos[paginaActual]) {
-      puntos[paginaActual].classList.remove("bg-gray-300");
-      puntos[paginaActual].classList.add("bg-blue-500");
-    }
-  }
-
-  // Opcional: sincronizar indicador con scroll manual
-  carrusel.addEventListener("scroll", () => {
-    const nuevaPagina = Math.round(carrusel.scrollLeft / carrusel.offsetWidth);
-    if (nuevaPagina !== paginaActual) {
-      paginaActual = nuevaPagina;
-      actualizarIndicadores();
-    }
   });
 </script>
 
