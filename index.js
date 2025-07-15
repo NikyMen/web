@@ -167,12 +167,12 @@ app.post("/carrito/finalizar", (req, res) => {
 
   const link = `https://wa.me/5493795036085?text=${encodeURIComponent(mensaje)}`
 
-  const historialPath = path.join(__dirname, "data", "historial-pedidos.json")
-  const historial = fs.existsSync(historialPath)
-    ? JSON.parse(fs.readFileSync(historialPath, "utf-8"))
-    : []
-  historial.push({ nombre, telefono, productos: productosEnCarrito, total, fecha: new Date().toISOString() })
-  fs.writeFileSync(historialPath, JSON.stringify(historial, null, 2))
+  // const historialPath = path.join(__dirname, "data", "historial-pedidos.json")
+  // const historial = fs.existsSync(historialPath)
+  //   ? JSON.parse(fs.readFileSync(historialPath, "utf-8"))
+  //   : []
+  // historial.push({ nombre, telefono, productos: productosEnCarrito, total, fecha: new Date().toISOString() })
+  // fs.writeFileSync(historialPath, JSON.stringify(historial, null, 2))
 
   Object.keys(carrito).forEach(c => delete carrito[c])
   res.redirect(link)

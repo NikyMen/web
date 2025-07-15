@@ -1,18 +1,19 @@
 // user-repository.js
-import DBLocal from "db-local"  // guarda los datos en archivos locales
+// import DBLocal from "db-local"  // guarda los datos en archivos locales
 import crypto from "crypto"     // genera UUID para los IDs
 import bcrypt from "bcryptjs"   // encripta y compara contraseñas
 import {SALT_ROUNDS} from "./config.js"
 
 // Inicializa la DB
-const { Schema } = new DBLocal({ path: "./db" })
+// const { Schema } = new DBLocal({ path: "./db" })
+const users = []
 
 // Define el modelo User
-const User = Schema("User", {
-  _id: { type: String, required: true },
-  username: { type: String, required: true },
-  password: { type: String, required: true }
-})
+// const User = Schema("User", {
+//   _id: { type: String, required: true },
+//   username: { type: String, required: true },
+//   password: { type: String, required: true }
+// })
 
 // Clase con métodos para manejar usuarios
 export class UserRepository {
@@ -21,19 +22,23 @@ export class UserRepository {
     Validation.password(password)
 
     // Verifica si ya existe el usuario
-    if (User.findOne({ username })) {
-      throw new Error("Username already exists")
-    }
+    // if (User.findOne({ username })) {
+    //   throw new Error("Username already exists")
+    // }
+    const user = users.find(u => u.username === username)
+    if (user) throw new Error("Username already exists")
+
 
     const id = crypto.randomUUID()
     const hashedPassword = bcrypt.hashSync(password, SALT_ROUNDS)
 
     // Crea y guarda el nuevo usuario
-    User.create({
-      _id: id,
-      username,
-      password: hashedPassword
-    }).save()
+    // User.create({
+    //   _id: id,
+    //   username,
+    //   password: hashedPassword
+    // }).save()
+    users.push({ _id: id, username, password: hashedPassword })
     return id
     
     
@@ -46,7 +51,8 @@ export class UserRepository {
     Validation.username(username)
     Validation.password(password)
 
-    const user = User.findOne({ username })
+    // const user = User.findOne({ username })
+    const user = users.find(u => u.username === username)
     if (!user) throw new Error("username does not exist")
 
     const isValid = await bcrypt.compare(password, user.password)
