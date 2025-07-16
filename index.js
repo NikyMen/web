@@ -30,12 +30,6 @@ app.use(express.urlencoded({ extended: true }))
 app.use(cookieParser())
 app.use(express.static(path.join(__dirname, "public")))
 
-// Middleware para conectar a la DB en cada request
-app.use(async (req, res, next) => {
-  await connectToDatabase();
-  next();
-});
-
 app.use((req, res, next) => {
   const token = req.cookies.user
   if (!token) return next()

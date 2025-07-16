@@ -16,7 +16,7 @@ export const loginUser = async (req, res) => {
     const user = await UserRepository.login({ username, password });
     const token = jwt.sign({ id: user._id, username: user.username }, SECRET_KEY, { expiresIn: "2h" });
     res.cookie("user", token, { httpOnly: true });
-    res.send({ user });
+    res.redirect("/");
 };
 
 export const registerUser = async (req, res) => {
