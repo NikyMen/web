@@ -42,10 +42,6 @@ app.use((req, res, next) => {
 })
 
 // RUTAS
-app.get("/health", (req, res) => {
-  res.status(200).json({ status: "ok", message: "El servidor está funcionando y el código está actualizado." });
-});
-
 app.get("/", async (req, res) => {
   // Para la página de inicio, mostramos solo un número limitado de productos para el slider.
   // Así evitamos cargar miles de productos y romper el carrusel.

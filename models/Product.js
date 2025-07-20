@@ -1,5 +1,5 @@
-// C:/Users/nikom/Dev/web/models/Product.js
-import mongoose from "mongoose";
+// models/Product.js
+import mongoose from 'mongoose';
 
 const ProductSchema = new mongoose.Schema({
   codigo: { type: String, required: true, unique: true },
@@ -9,7 +9,7 @@ const ProductSchema = new mongoose.Schema({
   imagen: { type: String }
 });
 
-const Product = mongoose.model("Product", ProductSchema);
+// Reutiliza el modelo si ya fue definido
+const Product = mongoose.models.Product || mongoose.model('Product', ProductSchema);
 
 export default Product;
-  
